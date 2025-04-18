@@ -2,7 +2,7 @@
 title: "The Alignment Formula: Large Language Models and Humans' Decisions in a False-Belief Task "
 collection: publications
 category: manuscripts
-permalink: 
+permalink: /publication/2009-10-01-paper-title-number-1
 excerpt: 'Description of thesis'
 date: 2009-10-01
 venue: 'Journal 1'
