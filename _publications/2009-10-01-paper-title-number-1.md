@@ -7,7 +7,7 @@ excerpt: 'Description of thesis'
 date: 2009-10-01
 venue: 'Journal 1'
 slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: '[http://academicpages.github.io/files/paper1.pdf](https://studenttheses.uu.nl/bitstream/handle/20.500.12932/47851/Zgreaban_9397094.pdf?sequence=1)'
+paperurl: '[https://studenttheses.uu.nl/bitstream/handle/20.500.12932/47851/Zgreaban_9397094.pdf?sequence=1]'
 bibtexurl: 'http://academicpages.github.io/files/bibtex1.bib'
 citation: 'Zgreabăn, M. (2024). The Alignment Formula: Large Language Models and Humans' Decisions in a False-Belief Task (Master's thesis).'
 ---
