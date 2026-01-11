@@ -16,17 +16,16 @@ body {
 }
 
 /* =========================
-   Layout
+   Layout (IDENTICAL LOGIC)
 ========================= */
 
 nav,
 main,
 footer {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-  font-size: 0.85rem;
-  opacity: 0.6;
-  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
 }
 
 /* =========================
@@ -52,16 +51,12 @@ nav a:hover {
   opacity: 1;
 }
 
-nav a.active {
-  opacity: 1;
-}
-
 /* =========================
-   Main content
+   Main
 ========================= */
 
 main {
-  margin-top: 6rem;
+  margin-top: 8rem;   /* same as your reference */
 }
 
 /* =========================
@@ -87,9 +82,14 @@ h2 {
   opacity: 0.8;
 }
 
+p {
+  max-width: 600px;
+  margin-bottom: 1.2rem;
+  opacity: 0.9;
+}
 
 /* =========================
-   Lists — calm & editorial
+   Lists (no bullets)
 ========================= */
 
 ul {
@@ -101,12 +101,35 @@ ul {
 ul li {
   margin-bottom: 0.6rem;
   opacity: 0.85;
-  line-height: 1.5;
 }
 
-/* News list slightly quieter */
+/* =========================
+   News spacing
+========================= */
+
 .news-section {
   margin-top: 4rem;
+}
+
+.news li {
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* center ONLY the email */
+.footer-email {
+  text-align: center;
 }
 
 
