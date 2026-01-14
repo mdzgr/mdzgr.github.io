@@ -1,65 +1,50 @@
-.pub-container {
-  max-width: 1000px;
-  margin: 80px auto;
-  padding: 0 24px;
+/* One publication block */
+.publication {
+  margin-bottom: 4rem;
 }
 
-.page-title {
-  font-size: 3rem;
-  margin-bottom: 64px;
-}
-
-.pub-list {
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-}
-
-.pub-card {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 32px;
-  align-items: center;
-}
-
-.pub-image img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 12px;
-  background: #eee;
-}
-
+/* Title above figure, pmmon-style */
 .pub-title {
-  font-size: 1.8rem;
-  margin: 0 0 12px 0;
+  font-size: 1.2rem;     /* slightly larger than h2 */
+  font-weight: 400;
+  margin-bottom: 1.5rem;
 }
 
-.pub-authors,
-.pub-venue {
-  margin: 0;
-  opacity: 0.75;
+/* Figure + text */
+.pub-body {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.5rem;
+  align-items: start;
 }
 
-.pub-links {
-  margin-top: 16px;
-  display: flex;
-  gap: 16px;
+/* Image */
+.pub-body img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.pub-links a {
+/* Text block */
+.pub-meta p {
+  margin-bottom: 0.8rem;
+}
+
+/* Links behave like rest of site */
+.pub-meta a {
   text-decoration: none;
-  font-weight: 500;
-  border-bottom: 1px solid transparent;
+  opacity: 0.8;
 }
 
-.pub-links a:hover {
-  border-bottom: 1px solid currentColor;
+.pub-meta a:hover {
+  opacity: 1;
 }
 
-@media (max-width: 700px) {
-  .pub-card {
+/* Mobile */
+@media (max-width: 600px) {
+  .pub-body {
     grid-template-columns: 1fr;
   }
 }
+
 
