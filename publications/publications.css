@@ -1,50 +1,27 @@
-/* One publication block */
-.publication {
-  margin-bottom: 4rem;
+.pub-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 800px;
 }
 
-/* Title above figure, pmmon-style */
-.pub-title {
-  font-size: 1.2rem;     /* slightly larger than h2 */
-  font-weight: 400;
-  margin-bottom: 1.5rem;
+.pub-list li {
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
 }
 
-/* Figure + text */
-.pub-body {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 1.5rem;
-  align-items: start;
-}
-
-/* Image */
-.pub-body img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Text block */
-.pub-meta p {
+.pub-list .year {
+  margin-top: 2.5rem;
   margin-bottom: 0.8rem;
+  font-size: 1.1rem;
 }
 
-/* Links behave like rest of site */
-.pub-meta a {
+.pub-list a {
   text-decoration: none;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
-.pub-meta a:hover {
+.pub-list a:hover {
   opacity: 1;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .pub-body {
-    grid-template-columns: 1fr;
-  }
 }
 
 
