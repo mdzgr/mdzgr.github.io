@@ -130,12 +130,26 @@ ul li {
 .news-section {
   margin-top: 4rem;
 }
-
+/* 
 .news li {
   font-size: 0.95rem;
   opacity: 0.75;
+} */
+
+   /* .year {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+} */
+
+/* tighter list inside each year */
+.news {
+  margin-bottom: 0.5rem;
 }
 
+.news li {
+  margin-bottom: 0.45rem;
+  opacity: 0.8;
+}
 /* =========================
    Footer
 ========================= */
@@ -203,6 +217,7 @@ a::after {
 a:hover::after {
   width: 100%;
 }
+
 
 
 
