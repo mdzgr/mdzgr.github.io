@@ -4,13 +4,10 @@ main {
   padding: 3rem 1.5rem 6rem;
 }
 
-
-/* big section separation */
-
+/* sections (less space between sections) */
 .retro-section {
-  margin-top: 6rem;
+  margin-top: 3.5rem;
 }
-
 
 /* headers */
 
@@ -25,20 +22,23 @@ h2 {
 
 /* years — spaced out more */
 
+/* years (less dramatic gap) */
 .year {
-  margin-top: 5rem;
-  margin-bottom: 2.5rem;
+  margin-top: 2.2rem;
+  margin-bottom: 1.2rem;
   font-size: 0.85rem;
-  opacity: 0.4;
+  opacity: 0.45;
   letter-spacing: 3px;
 }
 
 
 /* each entry gets breathing room */
 
+
+/* items (main fix — tighter list) */
 .item {
-  margin-bottom: 1rem;
-  line-height: 1.7;
+  margin-bottom: 1.4rem;   /* ← this is the key number */
+  line-height: 1.6;
   transition: transform 0.15s ease;
 }
 
