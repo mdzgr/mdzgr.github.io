@@ -1,11 +1,14 @@
-/* ============================= */
-/* Shared retro layout system    */
-/* ============================= */
+/* ===================================================== */
+/* Retro stacked layout system (Publications / Activity / About) */
+/* ===================================================== */
 
+/* section spacing */
 .retro-section {
   margin-top: 3.5rem;
 }
 
+
+/* year headers */
 .year {
   margin-top: 2.2rem;
   margin-bottom: 1.2rem;
@@ -14,19 +17,22 @@
   letter-spacing: 3px;
 }
 
+
+/* each entry block */
 .item {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.4rem;   /* ← adjust this to control density */
   line-height: 1.6;
   transition: transform 0.15s ease;
 }
 
+
+/* subtle 90s/zine hover shift */
 .item:hover {
   transform: translateX(6px);
 }
 
 
-/* animated link underline */
-
+/* clean animated underline links */
 a {
   text-decoration: none;
   position: relative;
@@ -47,6 +53,7 @@ a::after {
 a:hover::after {
   width: 100%;
 }
+
 
 
 
