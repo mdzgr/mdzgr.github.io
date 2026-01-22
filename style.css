@@ -94,7 +94,6 @@ h1 {
   margin-bottom: 2rem;
   opacity: 0.75;
 }
-This is
 
 /* p {
   max-width: 600px;
@@ -150,6 +149,11 @@ ul li {
   margin-bottom: 0.45rem;
   opacity: 0.8;
 }
+.news li::before {
+  content: "— ";
+  opacity: 0.5;
+}
+
 /* =========================
    Footer
 ========================= */
@@ -217,6 +221,7 @@ a::after {
 a:hover::after {
   width: 100%;
 }
+
 
 
 
