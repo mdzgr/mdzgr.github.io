@@ -79,9 +79,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.1rem;
-  font-weight: 400;
-  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
   opacity: 0.8;
 }
 
@@ -186,4 +188,5 @@ a::after {
 a:hover::after {
   width: 100%;
 }
+
 
