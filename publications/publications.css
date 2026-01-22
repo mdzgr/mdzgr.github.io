@@ -37,7 +37,7 @@ h2 {
 /* each entry gets breathing room */
 
 .item {
-  margin-bottom: 3.2rem;
+  margin-bottom: 1.6rem;
   line-height: 1.7;
   transition: transform 0.15s ease;
 }
