@@ -1,3 +1,13 @@
+section {
+  margin-bottom: 3.5rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
 .pub-list {
   list-style: none;
   padding-left: 0;
@@ -5,14 +15,13 @@
 }
 
 .pub-list li {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   line-height: 1.5;
 }
 
 .pub-list .year {
-  margin-top: 2.5rem;
-  margin-bottom: 0.8rem;
-  font-size: 1.1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
 }
 
 .pub-list a {
@@ -23,5 +32,4 @@
 .pub-list a:hover {
   opacity: 1;
 }
-
 
