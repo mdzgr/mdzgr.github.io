@@ -10,7 +10,8 @@
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  body {
+  font-family: "Inter", Helvetica, Arial, sans-serif;
   background: white;
   color: #111;
   line-height: 1.55;
@@ -185,3 +186,4 @@ a::after {
 a:hover::after {
   width: 100%;
 }
+
