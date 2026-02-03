@@ -10,11 +10,14 @@
 }
 
 body {
-  body {
-  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+
+  font-size: 18px;      /* bigger base like Eva */
+  font-weight: 500;     /* heavier = poster feel */
+  line-height: 1.75;
+
   background: white;
   color: #111;
-  line-height: 1.55;
 }
 
 /* =========================
@@ -33,20 +36,19 @@ footer {
 /* =========================
    Navigation
 ========================= */
-
 nav {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   display: flex;
-  gap: 2rem;
+  gap: 2.2rem;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
 }
 
 nav a {
-  text-decoration: none;
-  color: inherit;
-  opacity: 0.75;
+  opacity: 0.65;
 }
 
 nav a:hover {
@@ -64,47 +66,37 @@ main {
    Typography
 ========================= */
 
+/* BIG NAME (hero) */
 h1 {
-  font-size: 1.65rem;
-  font-weight: 500;
-  margin-bottom: 2rem;
-}
-
-
-
-.subtitle {
-  margin-bottom: 2rem;
-  opacity: 0.6;
-}
-
-
-/* h2 {
-  font-size: 1.05rem;
+  font-size: 3.2rem;
   font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 2.5rem;
-  opacity: 0.8;
-} */
-   h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  opacity: 0.75;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
 }
 
-/* p {
-  max-width: 600px;
-  margin-bottom: 1.2rem;
-  opacity: 0.9;
-} */
+.subtitle,
+.meta,
+.year {
+  opacity: 0.45; /* subtle but not washed out */
+}
+/* SECTION LABELS (PUBLICATIONS / NEWS etc) */
+h2 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin: 0;
+}
 
+
+/* BODY TEXT */
 p {
-  margin-bottom: 1.4rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 1.6rem;
 }
+
 
 
 /* =========================
@@ -265,6 +257,7 @@ main {
   font-size: 1.05rem;
   line-height: 1.85;
 }
+
 
 
 
