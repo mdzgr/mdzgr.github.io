@@ -4,12 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mădălina Zgreabăn</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
-    /* =========================
-       Base
-    ========================= */
-
     * {
       margin: 0;
       padding: 0;
@@ -17,26 +13,22 @@
     }
 
     body {
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-size: 18px;
+      font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
       font-weight: 400;
-      line-height: 1.55;
+      line-height: 1.5;
       background: white;
-      color: #1a1a1a;
+      color: #000;
     }
 
-    /* =========================
-       Navigation
-    ========================= */
+    /* Navigation - positioned at top edge like Eva */
     nav {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem 3rem 0;
+      padding: 1.5rem 2rem 0;
       display: flex;
       gap: 2rem;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 400;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
@@ -47,183 +39,137 @@
     }
 
     nav a:hover {
-      color: #D32F2F;
+      color: #CC0000;
     }
 
-    /* =========================
-       Hero Section (Eva-style)
-    ========================= */
-
-    .hero {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 5rem 3rem;
+    /* Main container - two column layout like Eva's CV */
+    .container {
       display: grid;
-      grid-template-columns: 280px 1fr;
-      column-gap: 100px;
-      align-items: start;
+      grid-template-columns: 240px 1fr;
+      gap: 80px;
+      padding: 3rem 2rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
-    .hero-left h1 {
-      font-size: 3.2rem;
+    /* LEFT COLUMN - like Eva's left side */
+    .left-column h1 {
+      font-size: 2.5rem;
       font-weight: 700;
-      line-height: 1.05;
-      margin-bottom: 1.8rem;
-      color: #D32F2F;
-      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+      color: #CC0000;
+      letter-spacing: -0.02em;
     }
 
-    .hero-left p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #1a1a1a;
-      margin-bottom: 0.3rem;
-      font-weight: 400;
-    }
-
-    .hero-right {
-      max-width: 65ch;
-    }
-
-    .hero-right p {
-      font-size: 1.1rem;
-      line-height: 1.65;
-      color: #D32F2F;
-      margin-bottom: 1.8rem;
-      font-weight: 400;
-    }
-
-    /* =========================
-       Main Content
-    ========================= */
-
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 3rem 4rem;
-    }
-
-    /* =========================
-       News Section
-    ========================= */
-
-    .retro-section {
-      margin-top: 6rem;
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      column-gap: 100px;
-    }
-
-    .retro-section h2 {
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #1a1a1a;
-      margin: 0;
-      padding-top: 0.2rem;
-    }
-
-    .retro-section .item {
+    .left-column p {
       font-size: 0.95rem;
-      line-height: 1.7;
-      color: #1a1a1a;
+      line-height: 1.4;
+      color: #000;
+      margin-bottom: 0.25rem;
+    }
+
+    .left-column .spacer {
       margin-bottom: 1rem;
     }
 
-    .retro-section .item strong {
-      font-weight: 600;
-      color: #1a1a1a;
+    /* RIGHT COLUMN - like Eva's bio text */
+    .right-column {
+      color: #CC0000;
+      font-size: 1rem;
+      line-height: 1.55;
+      max-width: 900px;
     }
 
-    /* =========================
-       Footer
-    ========================= */
+    .right-column p {
+      margin-bottom: 1.2rem;
+      color: #CC0000;
+    }
 
+    /* Section headers - like Eva's "EDUCATION", "EXHIBITIONS" etc */
+    .section {
+      margin-top: 5rem;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 80px;
+      padding: 0 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #000;
+      padding-top: 0.3rem;
+    }
+
+    .section-content {
+      max-width: 900px;
+    }
+
+    .news-item {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #000;
+      margin-bottom: 0.8rem;
+    }
+
+    .news-item strong {
+      font-weight: 600;
+    }
+
+    /* Footer */
     footer {
-      max-width: 1200px;
-      margin: 4rem auto 2rem;
-      padding: 0 3rem;
       text-align: center;
+      padding: 3rem 2rem 2rem;
       font-size: 0.9rem;
       color: #666;
     }
 
-    /* =========================
-       Links
-    ========================= */
-
+    /* Links */
     a {
       color: inherit;
       text-decoration: none;
-      position: relative;
     }
 
-    /* Optional: subtle underline effect */
-    .hero-right a,
-    .retro-section a {
-      color: #D32F2F;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s ease;
+    .right-column a {
+      color: #CC0000;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color 0.2s ease;
     }
 
-    .hero-right a:hover,
-    .retro-section a:hover {
-      border-bottom-color: #D32F2F;
+    .right-column a:hover {
+      text-decoration-color: #CC0000;
     }
 
-    /* =========================
-       Responsive
-    ========================= */
-
+    /* Responsive */
     @media (max-width: 900px) {
+      .container,
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+      }
+
       nav {
-        padding: 2rem 2rem 0;
-        gap: 1.5rem;
         flex-wrap: wrap;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        padding: 3rem 2rem;
-      }
-
-      .hero-left h1 {
-        font-size: 2.2rem;
-      }
-
-      .retro-section {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin-top: 4rem;
-      }
-
-      main {
-        padding: 0 2rem 3rem;
-      }
-
-      footer {
-        padding: 0 2rem;
-      }
-    }
-
-    @media (max-width: 600px) {
-      body {
-        font-size: 16px;
-      }
-
-      nav {
-        font-size: 0.7rem;
+        padding: 1.5rem 1.5rem 0;
         gap: 1.2rem;
       }
 
-      .hero-left h1 {
-        font-size: 1.8rem;
+      .left-column h1 {
+        font-size: 2rem;
       }
 
-      .hero-right p {
-        font-size: 1rem;
+      .section {
+        margin-top: 3rem;
       }
     }
   </style>
@@ -239,18 +185,19 @@
   <a href="activity_log.html">Activity log / CV</a>
 </nav>
 
-<section class="hero">
-  <div class="hero-left">
+<div class="container">
+  <div class="left-column">
     <h1>Mădălina Zgreabăn</h1>
     <p>31. 7. 1998</p>
     <p>Utrecht, NL</p>
-    <p>&nbsp;</p>
+    <p class="spacer">&nbsp;</p>
     <p>b.m.zgreaban@uu.nl</p>
     <p>+31 XXX XXX XXX</p>
   </div>
-  <div class="hero-right">
+  
+  <div class="right-column">
     <p>
-      Mădălina Zgreabăn is a second-year PhD candidate in NLP at Utrecht University. 
+      Mădălina Zgreabăn (b. 1998) is a second-year PhD candidate in NLP at Utrecht University. 
       She researches generalizability and explainability in natural language understanding, 
       with a focus on reasoning, benchmarks, and theorem-prover-based training for improved 
       model explanations. She is supervised by Lasha Abzianidze, Tejaswini Deoskar, and Yoad Winter.
@@ -265,18 +212,18 @@
       and AI, and organizing outreach events that support accessible education.
     </p>
   </div>
-</section>
+</div>
 
-<main>
-  <section class="retro-section">
-    <h2>News</h2>
-    <div>
-      <div class="item"><strong>Feb 2026</strong> — CHARM-EU (funded)</div>
-      <div class="item"><strong>Jan 2026</strong> — 2nd UniDive Training School (funded)</div>
-      <div class="item"><strong>Oct 2025</strong> — Pre-print of my first PhD article 🎉</div>
+<section class="section">
+  <div class="section-grid">
+    <div class="section-header">NEWS</div>
+    <div class="section-content">
+      <div class="news-item"><strong>Feb 2026</strong> — CHARM-EU (funded)</div>
+      <div class="news-item"><strong>Jan 2026</strong> — 2nd UniDive Training School (funded)</div>
+      <div class="news-item"><strong>Oct 2025</strong> — Pre-print of my first PhD article 🎉</div>
     </div>
-  </section>
-</main>
+  </div>
+</section>
 
 <footer>
   <p>b.m.zgreaban@uu.nl</p>
