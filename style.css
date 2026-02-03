@@ -1,0 +1,219 @@
+/* =========================
+   Base
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.65;
+  background: #FAFAFA;
+  color: #1a1a1a;
+}
+
+/* =========================
+   Navigation
+========================= */
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 3rem 0;
+  display: flex;
+  gap: 2.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #CC0000;
+}
+
+/* =========================
+   Hero Section (Eva-style)
+========================= */
+
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  column-gap: 100px;
+  align-items: start;
+}
+
+.hero-left h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #CC0000;
+  letter-spacing: -0.02em;
+}
+
+.hero-left p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.hero-right {
+  max-width: 65ch;
+}
+
+.hero-right p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #CC0000;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+/* =========================
+   Main Content
+========================= */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem 4rem;
+}
+
+/* =========================
+   News Section
+========================= */
+
+.retro-section {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  column-gap: 100px;
+}
+
+.retro-section h2 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin: 0;
+  padding-top: 0.2rem;
+}
+
+.retro-section .item {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.retro-section .item strong {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+  max-width: 1200px;
+  margin: 4rem auto 2rem;
+  padding: 0 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* =========================
+   Links
+========================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Optional: subtle underline effect */
+.hero-right a,
+.retro-section a {
+  color: #CC0000;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.hero-right a:hover,
+.retro-section a:hover {
+  border-bottom-color: #CC0000;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  nav {
+    padding: 2rem 2rem 0;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem 2rem;
+  }
+
+  .hero-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .retro-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 4rem;
+  }
+
+  main {
+    padding: 0 2rem 3rem;
+  }
+
+  footer {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  nav {
+    font-size: 0.7rem;
+    gap: 1.2rem;
+  }
+
+  .hero-left h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-right p {
+    font-size: 1rem;
+  }
+}
