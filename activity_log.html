@@ -3,12 +3,443 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Activity log – Mădălina Zgreabăn</title>
+  <title>Activity Log / CV - Mădălina Zgreabăn</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background: white;
+      color: #000;
+      padding-bottom: 80px; /* space for fixed nav */
+    }
+
+    /* Main container with wider layout */
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem 2rem;
+    }
+
+    /* 3-column CV grid */
+    .retro-section {
+      display: grid;
+      grid-template-columns: 260px 120px 1fr;
+      column-gap: 60px;
+      row-gap: 12px;
+      margin-top: 5rem;
+      align-items: start;
+    }
+
+    .retro-section:first-child {
+      margin-top: 0;
+    }
+
+    /* LEFT: section label */
+    .retro-section h2 {
+      grid-column: 1;
+      margin: 0;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      color: #CC0000;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding-top: 0.3rem;
+      line-height: 1.3;
+    }
+
+    /* MIDDLE: years */
+    .year {
+      grid-column: 2;
+      font-size: 1.2rem;
+      color: #CC0000;
+      letter-spacing: 0px;
+      margin: 1rem 0 0.5rem;
+      font-weight: 400;
+    }
+
+    /* RIGHT: entries */
+    .item {
+      grid-column: 3;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .item .title {
+      font-size: 1.4rem;
+      color: #CC0000;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .item .meta {
+      font-size: 1.05rem;
+      color: #000;
+      margin-bottom: 0.2rem;
+      line-height: 1.5;
+    }
+
+    .item .venue {
+      font-size: 1.05rem;
+      color: #000;
+      font-style: italic;
+      margin-bottom: 0.3rem;
+    }
+
+    .item .links {
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+    }
+
+    .item .links a {
+      color: #CC0000;
+      text-decoration: none;
+      margin-right: 0.8rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .item .links a:hover {
+      border-bottom-color: #CC0000;
+    }
+
+    /* Navigation at BOTTOM */
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 1px solid #000;
+      padding: 1.2rem 2rem;
+      display: flex;
+      gap: 2.5rem;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #666;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #CC0000;
+    }
+
+    nav a.active {
+      color: #CC0000;
+    }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .retro-section {
+        grid-template-columns: 220px 100px 1fr;
+        column-gap: 40px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      main {
+        padding: 2rem 1.5rem 4rem;
+      }
+
+      .retro-section {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      .retro-section h2 {
+        margin-bottom: 1rem;
+      }
+
+      .year {
+        grid-column: 1;
+        margin: 1.5rem 0 0.5rem;
+        font-weight: 600;
+      }
+
+      .item {
+        grid-column: 1;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding: 1rem 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
+
+<main>
+  <!-- ===================================================== -->
+  <!-- RESEARCH JOBS -->
+  <!-- ===================================================== -->
+
+  <section class="retro-section">
+    <h2>RESEARCH JOBS</h2>
+
+    <div class="year">2024</div>
+
+    <div class="item">
+      <div class="title">Research Assistant in Legal NLP*</div>
+      <div class="meta">Fine-tuned a LegalBERT classifier to detect illegal consent banners.</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="year">2023–2024</div>
+
+    <div class="item">
+      <div class="title">Research Intern for Vision & Language Models*</div>
+      <div class="meta">Active/passive and ditransitive sentences for the VALSE benchmark.</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="item">
+      <div class="title">Research Assistant in Forensic NLP</div>
+      <div class="meta">Author identification pipeline from scratch.</div>
+      <div class="venue">Leiden University</div>
+    </div>
+
+    <div class="item">
+      <div class="title">Visiting Researcher*</div>
+      <div class="meta">Created a new dataset of Romanian nominal compounds. Crowdsourcing.</div>
+      <div class="venue">University of Sheffield</div>
+    </div>
+
+    <div class="year">2023</div>
+
+    <div class="item">
+      <div class="title">Research Assistant in Computational Semantics</div>
+      <div class="meta">Checked automatic DRT & CCG discourse annotations.</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="item">
+      <div class="title">Teaching Assistant</div>
+      <div class="meta">Course on A.I. & psycholinguistics. Supervised 30 NLP research proposals.</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="year">2021–2022</div>
+
+    <div class="item">
+      <div class="title">Research Contributor</div>
+      <div class="meta">Co-wrote 'A Romanian Corpus Annotated with Verbal Multiword Expressions'.</div>
+      <div class="venue">The Romanian Academy</div>
+    </div>
+  </section>
+
+
+
+  <!-- ===================================================== -->
+  <!-- RESEARCH GRANTS -->
+  <!-- ===================================================== -->
+
+  <section class="retro-section">
+    <h2>RESEARCH GRANTS*</h2>
+
+    <div class="year">2023</div>
+
+    <div class="item">
+      <div class="title">Short-Term Scientific Mission Research Grant</div>
+      <div class="venue">UniDive, University of Sheffield</div>
+    </div>
+  </section>
+
+
+
+  <!-- ===================================================== -->
+  <!-- AWARDS & FELLOWSHIPS -->
+  <!-- ===================================================== -->
+
+  <section class="retro-section">
+    <h2>AWARDS & FELLOWSHIPS*</h2>
+
+    <div class="year">2024</div>
+
+    <div class="item">
+      <div class="title">Humanities Conference Grant Award</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="year">2023</div>
+
+    <div class="item">
+      <div class="title">Bright Minds Fellowship*</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="year">2022</div>
+
+    <div class="item">
+      <div class="title">Humanities Conference Grant Award</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="item">
+      <div class="title">Craving Science? Discover Conferences! Grant</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="item">
+      <div class="title">Bright Minds Fellowship*</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="year">2021</div>
+
+    <div class="item">
+      <div class="title">Award for Scientific Excellence</div>
+      <div class="venue">University of Bucharest</div>
+    </div>
+  </section>
+
+
+
+  <!-- ===================================================== -->
+  <!-- SCHOLARSHIPS -->
+  <!-- ===================================================== -->
+
+  <section class="retro-section">
+    <h2>SCHOLARSHIPS</h2>
+
+    <div class="year">2025</div>
+
+    <div class="item">
+      <div class="title">2nd UniDive Training School</div>
+      <div class="venue">UniDive</div>
+    </div>
+
+    <div class="year">2024</div>
+
+    <div class="item">
+      <div class="title">First-Generation Fund</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="year">2023</div>
+
+    <div class="item">
+      <div class="title">Scholarship to attend Summer Datathon on Linguistic Linked Open Data</div>
+      <div class="venue">NexusLinguarum</div>
+    </div>
+
+    <div class="item">
+      <div class="title">Grants to attend ALPS 2023, ESSLLI 2022, MLWS-CV 2022-2023</div>
+    </div>
+
+    <div class="year">2020–2024</div>
+
+    <div class="item">
+      <div class="title">First Merit Scholarship</div>
+      <div class="venue">University of Bucharest</div>
+    </div>
+
+    <div class="year">2019</div>
+
+    <div class="item">
+      <div class="title">Scholarship for "Logic and Transdisciplinarity" Research School</div>
+      <div class="venue">CIVIS Consortium</div>
+    </div>
+  </section>
+
+
+
+  <!-- ===================================================== -->
+  <!-- SUMMER SCHOOLS -->
+  <!-- ===================================================== -->
+
+  <section class="retro-section">
+    <h2>SUMMER SCHOOLS</h2>
+
+    <div class="year">2025</div>
+
+    <div class="item">
+      <div class="title">M2L</div>
+      <div class="venue">University of Split</div>
+    </div>
+
+    <div class="item">
+      <div class="title">LxMLS</div>
+      <div class="venue">University of Lisbon</div>
+    </div>
+
+    <div class="item">
+      <div class="title">LOT</div>
+      <div class="venue">University of Antwerp</div>
+    </div>
+
+    <div class="year">2023</div>
+
+    <div class="item">
+      <div class="title">ESSLLI</div>
+      <div class="venue">University of Ljubljana</div>
+    </div>
+
+    <div class="item">
+      <div class="title">5th Summer Datathon on Linguistic Linked Open Data</div>
+      <div class="venue">NexusLinguarum</div>
+    </div>
+
+    <div class="item">
+      <div class="title">ALPS Winter School</div>
+    </div>
+
+    <div class="year">2022</div>
+
+    <div class="item">
+      <div class="title">ESSLLI</div>
+      <div class="venue">National University of Ireland Galway</div>
+    </div>
+
+    <div class="item">
+      <div class="title">Machine Learning Winter School on Computer Vision (MLWS-CV)</div>
+      <div class="venue">Duke University</div>
+    </div>
+
+    <div class="item">
+      <div class="title">"Logic and Transdisciplinarity" Research School</div>
+      <div class="venue">CIRM</div>
+    </div>
+  </section>
+
+
+
+  <!-- ===================================================== -->
+  <!-- LEADERSHIP ACTIVITIES -->
+  <!-- ===================================================== -->
+
+  <section class="retro-section">
+    <h2>LEADERSHIP ACTIVITIES</h2>
+
+    <div class="year">2024</div>
+
+    <div class="item">
+      <div class="title">A Cup of Linguistics</div>
+      <div class="meta">Organized seminar meetings in which RMA/PhD students present their research work.</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="item">
+      <div class="title">Lingathon</div>
+      <div class="meta">Organized the first hackathon for linguistics, sponsored by the LOT Ad-hoc Event Fund.</div>
+      <div class="venue">Netherlands National Graduate School of Linguistics</div>
+    </div>
+  </section>
+
+</main>
 
 <nav>
   <a href="/index.html">About</a>
@@ -16,101 +447,8 @@
   <a href="/publications/index.html">Publications</a>
   <a href="/teaching.html">Teaching</a>
   <a href="/leadership.html">Leadership</a>
-  <a href="/activity_log.html">Activity log / CV</a>
+  <a href="/activity_log.html" class="active">Activity log / CV</a>
 </nav>
-  <main>
-    <section>
-    <h2>CV</h2>
-     <p class="meta">
-  You can download my full CV
-  <a href="/cv.pdf" target="_blank">here (PDF)</a>.
-</p>
-
-  </section>
-<section class="retro-section">
-  
-  <h2>Activity log</h2>
-
-  <!-- 2025 -->
-  <div class="year">2025</div>
-
-  <ul class="news">
-    <li>First pre-print for <em>MERGE</em></li>
-    <li>Presented <em>MERGE</em> at CLIN, Uiltjesdagen, NALOMA</li>
-    <li>Poster presentations at M2L, LOT & LxMLS</li>
-    <li>First attendance at ACL</li>
-    <li>Organized EMLAR conference</li>
-  </ul>
-
-
-  <!-- 2024 -->
-  <div class="year">2024</div>
-
-  <ul class="news">
-    <li>Started PhD project: <em>MERGE</em></li>
-    <li>Started PhD at Utrecht University</li>
-    <li>Completed Research MA</li>
-    <li>Research assistantship in Legal NLP</li>
-    <li>Co-organized Lingathon (LOT funded)</li>
-    <li>Funded research internship in vision–language models</li>
-    <li>Research visit at Sheffield University</li>
-    <li>Organized seminar series “A Cup of Linguistics”</li>
-    <li>Poster presentations at EMLAR & UniDive</li>
-    <li>Talks at Konstanz & LUCDH</li>
-    <li>Workshop presentation at SLE</li>
-  </ul>
-
-
-  <!-- 2023 -->
-  <div class="year">2023</div>
-
-  <ul class="news">
-    <li>Research assistantship in computational semantics</li>
-    <li>Teaching assistantship in AI & psycholinguistics</li>
-    <li>First NLP publication at RANLP</li>
-    <li>First linguistics publication in LingUU</li>
-    <li>Presentation at the LCC Graduate Conference</li>
-  </ul>
-
-
-  <!-- 2022 -->
-  <div class="year">2022</div>
-
-  <ul class="news">
-    <li>Conference paper presentation at CLIB</li>
-    <li>Humanities Conference Grant Award</li>
-    <li>Completed BA, University of Bucharest</li>
-    <li>Bright Minds Fellowship (Utrecht University)</li>
-    <li>Excellence in Research Scholarship</li>
-    <li>Joined UniDive research network</li>
-  </ul>
-
-
-  <!-- 2021 -->
-  <div class="year">2021</div>
-
-  <ul class="news">
-    <li>First journal publication in linguistics (humour)</li>
-    <li>Research collaboration with HLT Research Center</li>
-    <li>Research collaboration with Romanian Academy AI group</li>
-  </ul>
-
-
-  <!-- 2020 -->
-  <div class="year">2020</div>
-
-  <ul class="news">
-    <li>First journal publication on AI-generated literature in Observator Cultural</li>
-  </ul>
-
-</section>
-
-</main>
-
-
-<footer>
-  <p class="footer-email">b.m.zgreaban@uu.nl</p>
-</footer>
 
 </body>
 </html>
