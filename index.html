@@ -22,21 +22,21 @@
       min-height: 100vh;
       display: grid;
       grid-template-columns: 300px 1fr;
-      gap: 60px;
-      padding: 2rem 2.5rem 2rem 2rem;
+      gap: 20px;
+      padding: 2rem 1rem 2rem 1rem;
       align-items: start;
     }
 
     /* LEFT COLUMN - small text close to margin */
     .left-column {
-  margin-top: 0.35rem;
-}
+      margin-top: 0;
+    }
 
 
     .left-column h1 {
-      font-size: 2.2rem;
+      font-size: 1.5rem;
       font-weight: 700;
-      line-height: 1.35;
+      line-height: 1;
       margin-bottom: 1rem;
       color: #CC0000;
       letter-spacing: -0.01em;
@@ -60,14 +60,15 @@
 
     /* RIGHT COLUMN - HUGE text that fills the page */
     .right-column {
-      padding-top: 0.5rem;
+      padding-top: 0;
+      margin-top: -0.75rem;
     }
 
     .right-column p {
       font-size: 2.2rem;
       line-height: 1.35;
       color: #CC0000;
-      margin-top: -0.25rem;
+      margin-top: 0;
       margin-bottom: 1.5rem;
       font-weight: 400;
       letter-spacing: -0.01em;
@@ -105,68 +106,7 @@
     }
 
     /* Responsive */
-    /* @media (max-width: 1000px) {
-      .hero-container {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        padding: 2rem 1.5rem 5rem;
-      }
-
-      .right-column p {
-        font-size: 1.8rem;
-      }
-
-      nav {
-        flex-wrap: wrap;
-        gap: 1.5rem;
-        padding: 1rem 1.5rem;
-      }
-    } */
-
-    /* @media (max-width: 600px) {
-      .right-column p {
-        font-size: 1.4rem;
-      }
-
-      .left-column h1 {
-        font-size: 1.3rem;
-      }
-    } */
-    /* Responsive */
-    /* @media (max-width: 1000px) {
-      .hero-container {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        padding: 2rem 1.5rem 5rem;
-      }
-
-      .right-column p {
-        font-size: 1.8rem;
-      }
-
-      nav {
-        flex-wrap: wrap;
-        gap: 1.5rem;
-        padding: 1rem 1.5rem;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .right-column p {
-        font-size: 1.4rem;
-      }
-
-      .left-column h1 {
-        font-size: 1.3rem;
-      }
-    } */
     @media (max-width: 1000px) {
-      .hero-container {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        padding: 2rem 1.5rem 5rem;
-      }
-
       .right-column {
         margin-top: 0;
       }
@@ -183,12 +123,22 @@
     }
 
     @media (max-width: 600px) {
+      .hero-container {
+        grid-template-columns: 120px 1fr;
+        gap: 15px;
+        padding: 1.5rem 0.75rem 2rem 0.75rem;
+      }
+
       .right-column p {
-        font-size: 1.4rem;
+        font-size: 1rem;
       }
 
       .left-column h1 {
         font-size: 1.3rem;
+      }
+
+      .left-column p {
+        font-size: 0.85rem;
       }
     }
   </style>
@@ -200,25 +150,25 @@
     <h1>Mădălina Zgreabăn</h1>
     <p>Utrecht, NL</p>
     <p class="spacer">&nbsp;</p>
-    <p><a href="mailto:b.m.zgreaban@uu.nl">b.m.zgreaban@uu.nl</a></p>
+    <p><a href="/cdn-cgi/l/email-protection#75175b185b0f1207101417141b3500005b1b19"><span class="__cf_email__" data-cfemail="c3a1edaeedb9a4b1a6a2a1a2ad83b6b6edadaf">[email&#160;protected]</span></a></p>
     <p><a href="https://scholar.google.com/citations?user=N78K32sAAAAJ&hl=en">Google Scholar</a></p>
     <p><a href="https://github.com/mdzgr">GitHub</a></p>
   </div>
   
   <div class="right-column">
     <p>
-      <strong>A second-year PhD candidate</strong> in NLP at Utrecht University researching  
-      generalizability & explainability in NLU, 
+      <strong>A second-year PhD candidate</strong> in NLP at Utrecht University where I  
+      research generalizability & explainability in natural language understanding, 
       with a focus on reasoning, benchmarks, and explanations. Supervised by Lasha Abzianidze, Tejaswini Deoskar,  & Yoad Winter.
     </p>
     <p>
       I hold a BA in literature and linguistics from University of Bucharest & an MA 
       in linguistics from Utrecht University. I have had many research 'lives', from multimodal LLMs 
-      & comedy roasts, to weak definites and literary theory, with  — probably — many more to come :)
+      & comedy roasts, to weak definites and critical literary theory, with  — probably — many more to come.
     </p>
     <p>
-      My research practice is based on and values transdisciplinarity & creativity at the intersection of linguistics  
-      and AI. Currently exploring generative art in my free time, see here.
+      In my research, I try to practice transdisciplinarity, non-conformity & creative thinking at the intersection of linguistics  
+      and AI. Currently exploring generative art in my free time.
     </p>
   </div>
 </div>
