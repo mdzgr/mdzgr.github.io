@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activity Log - Mădălina Zgreabăn</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background: white;
+      color: #000;
+      padding-bottom: 80px;
+    }
+
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem 2rem;
+    }
+
+    .retro-section {
+      display: grid;
+      grid-template-columns: 260px 120px 1fr;
+      column-gap: 60px;
+      row-gap: 12px;
+      margin-top: 5rem;
+      align-items: start;
+    }
+
+    .retro-section:first-child { margin-top: 0; }
+
+    .retro-section h2 {
+      grid-column: 1;
+      margin: 0;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      color: #CC0000;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding-top: 0.3rem;
+      line-height: 1.3;
+    }
+
+    .year {
+      grid-column: 2;
+      font-size: 1.2rem;
+      color: #CC0000;
+      letter-spacing: 0px;
+      margin: 1rem 0 0.5rem;
+      font-weight: 400;
+    }
+
+    .item {
+      grid-column: 3;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .item .title { font-size: 1.4rem; color: #CC0000; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3; }
+    .item .meta { font-size: 1.05rem; color: #000; margin-bottom: 0.2rem; line-height: 1.5; }
+    .item .venue { font-size: 1.05rem; color: #000; font-style: italic; margin-bottom: 0.3rem; }
+    .item .links { font-size: 0.9rem; margin-top: 0.3rem; }
+    .item .links a { color: #CC0000; text-decoration: none; margin-right: 0.8rem; border-bottom: 1px solid transparent; transition: border-color 0.2s ease; }
+    .item .links a:hover { border-bottom-color: #CC0000; }
+
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 1px solid #000;
+      padding: 1.2rem 2rem;
+      display: flex;
+      gap: 2.5rem;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      z-index: 1000;
+      align-items: center;
+    }
+
+    nav a { color: #666; text-decoration: none; transition: color 0.2s ease; }
+    nav a:hover { color: #CC0000; }
+    nav a.active { color: #CC0000; }
+
+    .lang-toggle {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border: 1px solid #000;
+      overflow: hidden;
+    }
+
+    .lang-toggle button {
+      background: none;
+      border: none;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.7rem;
+      font-family: Helvetica, Arial, sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: #666;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .lang-toggle button.active { background: #CC0000; color: white; }
+    .lang-toggle button:not(.active):hover { color: #CC0000; }
+
+    @media (max-width: 1200px) {
+      .retro-section { grid-template-columns: 220px 100px 1fr; column-gap: 40px; }
+    }
+
+    @media (max-width: 900px) {
+      main { padding: 2rem 1.5rem 4rem; }
+      .retro-section { grid-template-columns: 1fr; gap: 0.5rem; }
+      .retro-section h2 { margin-bottom: 1rem; }
+      .year { grid-column: 1; margin: 1.5rem 0 0.5rem; font-weight: 600; }
+      .item { grid-column: 1; }
+      nav { flex-wrap: wrap; gap: 1.5rem; padding: 1rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<main>
+
+  <!-- RESEARCH JOBS -->
+  <section class="retro-section">
+    <h2 data-i18n="sec-research">RESEARCH JOBS</h2>
+
+    <div class="year">2024</div>
+    <div class="item">
+      <div class="title" data-i18n="rj1-title">Research Assistant in Legal NLP*</div>
+      <div class="meta" data-i18n="rj1-meta">Fine-tuned a LegalBERT classifier to detect illegal consent banners.</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="year">2023–2024</div>
+    <div class="item">
+      <div class="title" data-i18n="rj2-title">Research Intern for Vision & Language Models*</div>
+      <div class="meta" data-i18n="rj2-meta">Active/passive and ditransitive sentences for the VALSE benchmark.</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="rj3-title">Research Assistant in Forensic NLP</div>
+      <div class="meta" data-i18n="rj3-meta">Author identification pipeline from scratch.</div>
+      <div class="venue">Leiden University</div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="rj4-title">Visiting Researcher*</div>
+      <div class="meta" data-i18n="rj4-meta">Created a new dataset of Romanian nominal compounds. Crowdsourcing.</div>
+      <div class="venue">University of Sheffield</div>
+    </div>
+
+    <div class="year">2023</div>
+    <div class="item">
+      <div class="title" data-i18n="rj5-title">Research Assistant in Computational Semantics</div>
+      <div class="meta" data-i18n="rj5-meta">Checked automatic DRT & CCG discourse annotations.</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="year">2021–2022</div>
+    <div class="item">
+      <div class="title" data-i18n="rj6-title">Research Contributor</div>
+      <div class="meta" data-i18n="rj6-meta">Co-wrote 'A Romanian Corpus Annotated with Verbal Multiword Expressions'.</div>
+      <div class="venue">The Romanian Academy</div>
+    </div>
+  </section>
+
+  <!-- TEACHING -->
+  <section class="retro-section">
+    <h2 data-i18n="sec-teaching">TEACHING</h2>
+
+    <div class="year">2026</div>
+    <div class="item">
+      <div class="title" data-i18n="teach1-title">Lecturer</div>
+      <div class="meta" data-i18n="teach1-meta">Taught a lecture on Regex in the Digital Tools and Methods course.</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="year">2024</div>
+    <div class="item">
+      <div class="title" data-i18n="teach2-title">Teaching Assistant</div>
+      <div class="meta" data-i18n="teach2-meta">Course on A.I. & psycholinguistics. Supervised 30 NLP research proposals.</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+  </section>
+
+  <!-- RESEARCH GRANTS -->
+  <section class="retro-section">
+    <h2 data-i18n="sec-grants">RESEARCH GRANTS*</h2>
+
+    <div class="year">2023</div>
+    <div class="item">
+      <div class="title" data-i18n="grant1-title">Short-Term Scientific Mission Research Grant</div>
+      <div class="venue">UniDive, University of Sheffield</div>
+    </div>
+  </section>
+
+  <!-- AWARDS & FELLOWSHIPS -->
+  <section class="retro-section">
+    <h2 data-i18n="sec-awards">AWARDS & FELLOWSHIPS*</h2>
+
+    <div class="year">2024</div>
+    <div class="item">
+      <div class="title" data-i18n="award1-title">Humanities Conference Grant Award</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="year">2023</div>
+    <div class="item">
+      <div class="title" data-i18n="award2-title">Bright Minds Fellowship*</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="year">2022</div>
+    <div class="item">
+      <div class="title" data-i18n="award3-title">Humanities Conference Grant Award</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="award4-title">Craving Science? Discover Conferences! Grant</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="award5-title">Bright Minds Fellowship*</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="year">2021</div>
+    <div class="item">
+      <div class="title" data-i18n="award6-title">Award for Scientific Excellence</div>
+      <div class="venue">University of Bucharest</div>
+    </div>
+  </section>
+
+  <!-- SCHOLARSHIPS -->
+  <section class="retro-section">
+    <h2 data-i18n="sec-scholarships">SCHOLARSHIPS</h2>
+
+    <div class="year">2026</div>
+    <div class="item">
+      <div class="title">CHARM-EU Winter School</div>
+      <div class="venue">CHARM-EU</div>
+    </div>
+
+    <div class="year">2025</div>
+    <div class="item">
+      <div class="title" data-i18n="sch1-title">2nd UniDive Training School</div>
+      <div class="venue">UniDive</div>
+    </div>
+
+    <div class="year">2024</div>
+    <div class="item">
+      <div class="title" data-i18n="sch2-title">First-Generation Fund</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="year">2021-2023</div>
+    <div class="item">
+      <div class="title" data-i18n="sch3-title">Scholarships to attend IWL Harvard 2021, ESSLLI, MLWS-CV 2022, the "Logic and Transdisciplinarity" Research School, the Summer Datathon on Linguistic Linked Open Data, ALPS 2023</div>
+    </div>
+
+    <div class="year">2020</div>
+    <div class="item">
+      <div class="title" data-i18n="sch4-title">Leaders Explore Scholarship</div>
+      <div class="meta" data-i18n="sch4-meta">Leadership Programme</div>
+      <div class="venue">Leaders Explore</div>
+    </div>
+
+    <div class="year">2019–2022</div>
+    <div class="item">
+      <div class="title" data-i18n="sch5-title">First Merit Scholarship</div>
+      <div class="venue">University of Bucharest</div>
+    </div>
+  </section>
+
+  <!-- SUMMER SCHOOLS -->
+  <section class="retro-section">
+    <h2 data-i18n="sec-summer">SUMMER SCHOOLS</h2>
+
+    <div class="year">2026</div>
+    <div class="item">
+      <div class="title" data-i18n="ss1-title">2nd UniDive Training School</div>
+      <div class="venue">Yerevan State University</div>
+    </div>
+
+    <div class="year">2025</div>
+    <div class="item">
+      <div class="title">M2L</div>
+      <div class="venue">University of Split</div>
+    </div>
+    <div class="item">
+      <div class="title">LxMLS</div>
+      <div class="venue">University of Lisbon</div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="ss2-title">LOT Summer School</div>
+      <div class="venue">University of Antwerp</div>
+    </div>
+
+    <div class="year">2023</div>
+    <div class="item">
+      <div class="title">ESSLLI</div>
+      <div class="venue">University of Ljubljana</div>
+    </div>
+    <div class="item">
+      <div class="title">5th Summer Datathon on Linguistic Linked Open Data (NexusLinguarum)</div>
+      <div class="venue">University of Zagreb</div>
+    </div>
+    <div class="item">
+      <div class="title">EMLAR</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="ss3-title">ALPS Winter School (Advanced Language Processing)</div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="ss4-title">LOT Winter School</div>
+      <div class="venue">University of Amsterdam</div>
+    </div>
+
+    <div class="year">2022</div>
+    <div class="item">
+      <div class="title">ESSLLI</div>
+      <div class="venue">National University of Ireland Galway</div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="ss5-title">Machine Learning Winter School on Computer Vision (MLWS-CV)</div>
+      <div class="venue">Duke University</div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="ss6-title">"Logic and Transdisciplinarity" Research School</div>
+      <div class="meta" data-i18n="ss6-meta">Graduate Level Programme</div>
+      <div class="venue">Centre International de Rencontres Mathématiques</div>
+    </div>
+    <div class="item">
+      <div class="title">EMLAR</div>
+      <div class="venue">Utrecht University · Online</div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="ss7-title">Languages in Europe and their Diachronies School</div>
+      <div class="venue">CIVIS Alliance</div>
+    </div>
+
+    <div class="year">2021</div>
+    <div class="item">
+      <div class="title" data-i18n="ss8-title">Institute for World Literature</div>
+      <div class="meta" data-i18n="ss8-meta">Graduate Level Programme</div>
+      <div class="venue">Harvard University</div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section class="retro-section">
+    <h2 data-i18n="sec-leadership">LEADERSHIP ACTIVITIES</h2>
+
+    <div class="year">2025</div>
+    <div class="item">
+      <div class="title">EMLAR</div>
+      <div class="meta" data-i18n="lead1-meta">Co-organizer; linguistics conference.</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="year">2024</div>
+    <div class="item">
+      <div class="title" data-i18n="lead2-title">Lingathon (funded by LOT)</div>
+      <div class="meta" data-i18n="lead2-meta">Co-organizer; organized the first national linguistics hackathon for interdisciplinary collaboration among RMA/PhD students.</div>
+      <div class="venue">Netherlands National Graduate School of Linguistics</div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="lead3-title">A cup of linguistics</div>
+      <div class="meta" data-i18n="lead3-meta">Co-organizer; organized seminar meetings in which RMA/PhD students present their research work.</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+
+    <div class="year">2023</div>
+    <div class="item">
+      <div class="title" data-i18n="lead4-title">UtrechtInc – Ready to Start</div>
+      <div class="meta" data-i18n="lead4-meta">Participant in academic entrepreneurship programme; developed a start-up concept for customizable educational AI tutors.</div>
+      <div class="venue">Utrecht University</div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="lead5-title">Linguistics Association Workshop</div>
+      <div class="meta" data-i18n="lead5-meta">Delivered a workshop advising young researchers on research careers and applications.</div>
+      <div class="venue">University of Bucharest</div>
+    </div>
+
+    <div class="year">2022</div>
+    <div class="item">
+      <div class="title" data-i18n="lead6-title">AFIST Mentorship Programme</div>
+      <div class="meta" data-i18n="lead6-meta">Completed mentorship focused on research career planning and technical skill development.</div>
+      <div class="venue">Association for Women in Engineering, Science and Technology</div>
+    </div>
+
+    <div class="year">2020</div>
+    <div class="item">
+      <div class="title" data-i18n="lead7-title">Capacitate+</div>
+      <div class="meta" data-i18n="lead7-meta">Co-founded an online learning platform supporting ~300 students preparing for national exams during the pandemic; developed lessons and curriculum.</div>
+      <div class="links"><a href="https://capacitateplus.wixsite.com/mysite" target="_blank">[Website]</a></div>
+      <div class="venue">Leaders Explore Programme</div>
+    </div>
+
+    <div class="year">2019</div>
+    <div class="item">
+      <div class="title" data-i18n="lead8-title">Design thinking competitions</div>
+      <div class="meta" data-i18n="lead8-meta">Designed a youth culture hub proposal and won a design-thinking competition addressing urban mobility challenges.</div>
+      <div class="venue">Builders of the Future (Creatori de Viitor)</div>
+    </div>
+  </section>
+
+</main>
+
+<nav>
+  <a href="/index.html" id="nav-about">About</a>
+  <a href="/publications/index.html" id="nav-publications">Publications</a>
+  <a href="/activity_log.html" class="active" id="nav-activity">Activity log</a>
+  <div class="lang-toggle">
+    <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+    <button id="btn-ro" onclick="setLang('ro')">RO</button>
+  </div>
+</nav>
+
+<script>
+const i18n = {
+  en: {
+    'sec-research': 'RESEARCH JOBS',
+    'sec-teaching': 'TEACHING',
+    'sec-grants': 'RESEARCH GRANTS*',
+    'sec-awards': 'AWARDS & FELLOWSHIPS*',
+    'sec-scholarships': 'SCHOLARSHIPS',
+    'sec-summer': 'SUMMER SCHOOLS',
+    'sec-leadership': 'LEADERSHIP ACTIVITIES',
+    'rj1-title': 'Research Assistant in Legal NLP*',
+    'rj1-meta': 'Fine-tuned a LegalBERT classifier to detect illegal consent banners.',
+    'rj2-title': 'Research Intern for Vision & Language Models*',
+    'rj2-meta': 'Active/passive and ditransitive sentences for the VALSE benchmark.',
+    'rj3-title': 'Research Assistant in Forensic NLP',
+    'rj3-meta': 'Author identification pipeline from scratch.',
+    'rj4-title': 'Visiting Researcher*',
+    'rj4-meta': 'Created a new dataset of Romanian nominal compounds. Crowdsourcing.',
+    'rj5-title': 'Research Assistant in Computational Semantics',
+    'rj5-meta': 'Checked automatic DRT & CCG discourse annotations.',
+    'rj6-title': 'Research Contributor',
+    'rj6-meta': "Co-wrote 'A Romanian Corpus Annotated with Verbal Multiword Expressions'.",
+    'teach1-title': 'Lecturer',
+    'teach1-meta': 'Taught a lecture on Regex in the Digital Tools and Methods course.',
+    'teach2-title': 'Teaching Assistant',
+    'teach2-meta': 'Course on A.I. & psycholinguistics. Supervised 30 NLP research proposals.',
+    'grant1-title': 'Short-Term Scientific Mission Research Grant',
+    'award1-title': 'Humanities Conference Grant Award',
+    'award2-title': 'Bright Minds Fellowship*',
+    'award3-title': 'Humanities Conference Grant Award',
+    'award4-title': 'Craving Science? Discover Conferences! Grant',
+    'award5-title': 'Bright Minds Fellowship*',
+    'award6-title': 'Award for Scientific Excellence',
+    'sch1-title': '2nd UniDive Training School',
+    'sch2-title': 'First-Generation Fund',
+    'sch3-title': 'Scholarships to attend IWL Harvard 2021, ESSLLI, MLWS-CV 2022, the "Logic and Transdisciplinarity" Research School, the Summer Datathon on Linguistic Linked Open Data, ALPS 2023',
+    'sch4-title': 'Leaders Explore Scholarship',
+    'sch4-meta': 'Leadership Programme',
+    'sch5-title': 'First Merit Scholarship',
+    'ss1-title': '2nd UniDive Training School',
+    'ss2-title': 'LOT Summer School',
+    'ss3-title': 'ALPS Winter School (Advanced Language Processing)',
+    'ss4-title': 'LOT Winter School',
+    'ss5-title': 'Machine Learning Winter School on Computer Vision (MLWS-CV)',
+    'ss6-title': '"Logic and Transdisciplinarity" Research School',
+    'ss6-meta': 'Graduate Level Programme',
+    'ss7-title': 'Languages in Europe and their Diachronies School',
+    'ss8-title': 'Institute for World Literature',
+    'ss8-meta': 'Graduate Level Programme',
+    'lead1-meta': 'Co-organizer; linguistics conference.',
+    'lead2-title': 'Lingathon (funded by LOT)',
+    'lead2-meta': 'Co-organizer; organized the first national linguistics hackathon for interdisciplinary collaboration among RMA/PhD students.',
+    'lead3-title': 'A cup of linguistics',
+    'lead3-meta': 'Co-organizer; organized seminar meetings in which RMA/PhD students present their research work.',
+    'lead4-title': 'UtrechtInc – Ready to Start',
+    'lead4-meta': 'Participant in academic entrepreneurship programme; developed a start-up concept for customizable educational AI tutors.',
+    'lead5-title': 'Linguistics Association Workshop',
+    'lead5-meta': 'Delivered a workshop advising young researchers on research careers and applications.',
+    'lead6-title': 'AFIST Mentorship Programme',
+    'lead6-meta': 'Completed mentorship focused on research career planning and technical skill development.',
+    'lead7-title': 'Capacitate+',
+    'lead7-meta': 'Co-founded an online learning platform supporting ~300 students preparing for national exams during the pandemic; developed lessons and curriculum.',
+    'lead8-title': 'Design thinking competitions',
+    'lead8-meta': 'Designed a youth culture hub proposal and won a design-thinking competition addressing urban mobility challenges.',
+    'nav-about': 'About',
+    'nav-publications': 'Publications',
+    'nav-activity': 'Activity log',
+  },
+  ro: {
+    'sec-research': 'LOCURI DE MUNCĂ ÎN CERCETARE',
+    'sec-teaching': 'PREDARE',
+    'sec-grants': 'GRANTURI DE CERCETARE*',
+    'sec-awards': 'PREMII & BURSE*',
+    'sec-scholarships': 'BURSE',
+    'sec-summer': 'ȘCOLI DE VARĂ',
+    'sec-leadership': 'ACTIVITĂȚI DE LEADERSHIP',
+    'rj1-title': 'Asistentă de cercetare în NLP Juridic*',
+    'rj1-meta': 'Am antrenat fin un clasificator LegalBERT pentru detectarea bannerelor de consimțământ ilegale.',
+    'rj2-title': 'Stagiar de cercetare pentru Modele de Viziune și Limbaj*',
+    'rj2-meta': 'Propoziții active/pasive și ditransitive pentru benchmark-ul VALSE.',
+    'rj3-title': 'Asistentă de cercetare în NLP Criminalistic',
+    'rj3-meta': 'Implementare pipeline de identificare a autorului de la zero.',
+    'rj4-title': 'Cercetătoare Invitată*',
+    'rj4-meta': 'Am creat un nou set de date de compuse nominale românești. Crowdsourcing.',
+    'rj5-title': 'Asistentă de cercetare în Semantică Computațională',
+    'rj5-meta': 'Am verificat adnotări automate de discurs DRT & CCG.',
+    'rj6-title': 'Contributor de Cercetare',
+    'rj6-meta': "Co-autoare a lucrării 'Un corpus românesc adnotat cu expresii verbale cu mai multe cuvinte'.",
+    'teach1-title': 'Lector',
+    'teach1-meta': 'Am predat un curs despre Regex în cadrul cursului Instrumente și Metode Digitale.',
+    'teach2-title': 'Asistentă didactică',
+    'teach2-meta': 'Curs despre I.A. și psiholingvistică. Am supervizat 30 de propuneri de cercetare NLP.',
+    'grant1-title': 'Grant de Cercetare pentru Misiune Științifică de Scurtă Durată',
+    'award1-title': 'Premiu Grant Conferință Umanistică',
+    'award2-title': 'Bursă Bright Minds*',
+    'award3-title': 'Premiu Grant Conferință Umanistică',
+    'award4-title': 'Grant „Craving Science? Discover Conferences!"',
+    'award5-title': 'Bursă Bright Minds*',
+    'award6-title': 'Premiu pentru Excelență Științifică',
+    'sch1-title': 'A 2-a Școală de Formare UniDive',
+    'sch2-title': 'Fondul pentru Prima Generație',
+    'sch3-title': 'Burse pentru participarea la IWL Harvard 2021, ESSLLI, MLWS-CV 2022, Școala de Cercetare „Logică și Transdisciplinaritate", Summer Datathon on Linguistic Linked Open Data, ALPS 2023',
+    'sch4-title': 'Bursă Leaders Explore',
+    'sch4-meta': 'Program de Leadership',
+    'sch5-title': 'Bursă de Merit I',
+    'ss1-title': 'A 2-a Școală de Formare UniDive',
+    'ss2-title': 'Școala de Vară LOT',
+    'ss3-title': 'Școala de Iarnă ALPS (Procesare Avansată a Limbajului)',
+    'ss4-title': 'Școala de Iarnă LOT',
+    'ss5-title': 'Școala de Iarnă de Machine Learning pentru Viziune pe Calculator (MLWS-CV)',
+    'ss6-title': 'Școala de Cercetare „Logică și Transdisciplinaritate"',
+    'ss6-meta': 'Program de Nivel Doctoral',
+    'ss7-title': 'Școala Limbilor Europene și Diacroniile Lor',
+    'ss8-title': 'Institutul de Literatură Mondială',
+    'ss8-meta': 'Program de Nivel Doctoral',
+    'lead1-meta': 'Co-organizatoare; conferință de lingvistică.',
+    'lead2-title': 'Lingathon (finanțat de LOT)',
+    'lead2-meta': 'Co-organizatoare; am organizat primul hackathon național de lingvistică pentru colaborare interdisciplinară între studenți RMA/doctoranzi.',
+    'lead3-title': 'O ceașcă de lingvistică',
+    'lead3-meta': 'Co-organizatoare; am organizat întâlniri de seminar în care studenți RMA/doctoranzi își prezintă activitatea de cercetare.',
+    'lead4-title': 'UtrechtInc – Ready to Start',
+    'lead4-meta': 'Participantă la un program de antreprenoriat academic; am dezvoltat un concept de start-up pentru tutori educaționali AI personalizabili.',
+    'lead5-title': 'Atelier al Asociației de Lingvistică',
+    'lead5-meta': 'Am susținut un atelier de consiliere a tinerilor cercetători privind carierele de cercetare și aplicațiile.',
+    'lead6-title': 'Programul de Mentorat AFIST',
+    'lead6-meta': 'Am finalizat un program de mentorat axat pe planificarea carierei de cercetare și dezvoltarea competențelor tehnice.',
+    'lead7-title': 'Capacitate+',
+    'lead7-meta': 'Co-fondatoare a unei platforme de învățare online care a sprijinit ~300 de elevi ce se pregăteau pentru examene naționale în timpul pandemiei; am dezvoltat lecții și curriculum.',
+    'lead8-title': 'Concursuri de design thinking',
+    'lead8-meta': 'Am proiectat o propunere de centru cultural pentru tineret și am câștigat un concurs de design thinking privind provocările de mobilitate urbană.',
+    'nav-about': 'Despre',
+    'nav-publications': 'Publicații',
+    'nav-activity': 'Jurnal de activitate',
+  }
+};
+
+function setLang(lang) {
+  const t = i18n[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+  document.getElementById('nav-about').textContent = t['nav-about'];
+  document.getElementById('nav-publications').textContent = t['nav-publications'];
+  document.getElementById('nav-activity').textContent = t['nav-activity'];
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ro').classList.toggle('active', lang === 'ro');
+  document.documentElement.lang = lang;
+  localStorage.setItem('lang', lang);
+}
+
+const saved = localStorage.getItem('lang');
+if (saved && saved !== 'en') setLang(saved);
+</script>
+
+</body>
+</html>
