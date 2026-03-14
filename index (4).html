@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mădălina Zgreabăn</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background: white;
+      color: #000;
+    }
+
+    .hero-container {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 20px;
+      padding: 2rem 1rem 2rem 1rem;
+      align-items: start;
+    }
+
+    .left-column { margin-top: 0; }
+
+    .left-column h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 1.5rem;
+      margin-top: -1rem;
+      color: #CC0000;
+      letter-spacing: -0.01em;
+    }
+
+    .left-column p {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #CC0000;
+      margin-bottom: 0.2rem;
+    }
+
+    .left-column .spacer { margin-bottom: 1rem; }
+
+    .left-column a { color: #CC0000; text-decoration: none; }
+
+    .right-column { padding-top: 0; margin-top: -1rem; }
+
+    .right-column p {
+      font-size: 2rem;
+      line-height: 1.35;
+      color: #CC0000;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .right-column em { font-style: italic; }
+
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 1px solid #000;
+      padding: 1.2rem 2rem;
+      display: flex;
+      gap: 2.5rem;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      align-items: center;
+    }
+
+    nav a {
+      color: #666;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover { color: #CC0000; }
+
+    /* Language toggle */
+    .lang-toggle {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border: 1px solid #000;
+      overflow: hidden;
+    }
+
+    .lang-toggle button {
+      background: none;
+      border: none;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.7rem;
+      font-family: Helvetica, Arial, sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: #666;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .lang-toggle button.active {
+      background: #CC0000;
+      color: white;
+    }
+
+    .lang-toggle button:not(.active):hover {
+      color: #CC0000;
+    }
+
+    @media (max-width: 1000px) {
+      .right-column { margin-top: 0; }
+      .right-column p { font-size: 1.8rem; }
+      nav { flex-wrap: wrap; gap: 1.5rem; padding: 1rem 1.5rem; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-container {
+        grid-template-columns: 120px 1fr;
+        gap: 15px;
+        padding: 1.5rem 0.75rem 2rem 0.75rem;
+      }
+      .right-column p { font-size: 1rem; }
+      .left-column h1 { font-size: 1.3rem; }
+      .left-column p { font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero-container">
+  <div class="left-column">
+    <h1>Mădălina Zgreabăn</h1>
+    <p>Utrecht, NL</p>
+    <p class="spacer">&nbsp;</p>
+    <p><a href="mailto:b.m.zgreaban@uu.nl">b.m.zgreaban@uu.nl</a></p>
+    <p><a href="https://scholar.google.com/citations?user=N78K32sAAAAJ&hl=en">Google Scholar</a></p>
+    <p><a href="https://github.com/mdzgr">GitHub</a></p>
+  </div>
+
+  <div class="right-column">
+    <p id="bio1">
+      <strong>Second-year PhD candidate</strong> in NLP at Utrecht University researching generalizability and explainability in LLMs, with a focus on reasoning, benchmarks, and explanations. Supervised by Lasha Abzianidze, Tejaswini Deoskar, and Yoad Winter.
+    </p>
+    <p id="bio2">
+      I hold a BA in literature and linguistics from the University of Bucharest and an MA in linguistics from Utrecht University (Bright Minds Fellow). Some of my other (or former) research interests span across linguistics and A.I., from multimodal LLMs, humor and comedy roasts, weak definites, to critical literary theory — with many more directions to come.
+    </p>
+    <p id="bio3">
+      I value transdisciplinarity, creativity, and anything at the intersection of linguistics and AI. Trained in poetry and theatre before academia, I now channel that creativity into creative side-quests and leadership initiatives.
+    </p>
+  </div>
+</div>
+
+<nav>
+  <a href="index.html" id="nav-about">About</a>
+  <a href="publications/index.html" id="nav-publications">Publications</a>
+  <a href="activity_log.html" id="nav-activity">Activity log</a>
+  <div class="lang-toggle">
+    <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+    <button id="btn-ro" onclick="setLang('ro')">RO</button>
+  </div>
+</nav>
+
+<script>
+const translations = {
+  en: {
+    bio1: '<strong>Second-year PhD candidate</strong> in NLP at Utrecht University researching generalizability and explainability in LLMs, with a focus on reasoning, benchmarks, and explanations. Supervised by Lasha Abzianidze, Tejaswini Deoskar, and Yoad Winter.',
+    bio2: 'I hold a BA in literature and linguistics from the University of Bucharest and an MA in linguistics from Utrecht University (Bright Minds Fellow). Some of my other (or former) research interests span across linguistics and A.I., from multimodal LLMs, humor and comedy roasts, weak definites, to critical literary theory — with many more directions to come.',
+    bio3: 'I value transdisciplinarity, creativity, and anything at the intersection of linguistics and AI. Trained in poetry and theatre before academia, I now channel that creativity into creative side-quests and leadership initiatives.',
+    navAbout: 'About',
+    navPublications: 'Publications',
+    navActivity: 'Activity log',
+  },
+  ro: {
+    bio1: '<strong>Doctorandă în al doilea an</strong> în NLP la Universitatea Utrecht, cercetând generalizabilitatea și explicabilitatea în LLM-uri, cu accent pe raționament, benchmark-uri și explicații. Supravegheată de Lasha Abzianidze, Tejaswini Deoskar și Yoad Winter.',
+    bio2: 'Am o licență în literatură și lingvistică de la Universitatea din București și un master în lingvistică de la Universitatea Utrecht (Bursieră Bright Minds). Unele dintre celelalte interese de cercetare (actuale sau anterioare) se întind pe lingvistică și I.A., de la LLM-uri multimodale, umor și comedy roast-uri, definite slabe, până la teoria literară critică — cu multe alte direcții de urmat.',
+    bio3: 'Prețuiesc transdisciplinaritatea, creativitatea și orice se află la intersecția dintre lingvistică și IA. Formată în poezie și teatru înainte de academie, îmi canalizez acum creativitatea în proiecte secundare și inițiative de leadership.',
+    navAbout: 'Despre',
+    navPublications: 'Publicații',
+    navActivity: 'Jurnal de activitate',
+  }
+};
+
+function setLang(lang) {
+  const t = translations[lang];
+  document.getElementById('bio1').innerHTML = t.bio1;
+  document.getElementById('bio2').innerHTML = t.bio2;
+  document.getElementById('bio3').innerHTML = t.bio3;
+  document.getElementById('nav-about').textContent = t.navAbout;
+  document.getElementById('nav-publications').textContent = t.navPublications;
+  document.getElementById('nav-activity').textContent = t.navActivity;
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ro').classList.toggle('active', lang === 'ro');
+  document.documentElement.lang = lang;
+  localStorage.setItem('lang', lang);
+}
+
+// Restore language preference
+const saved = localStorage.getItem('lang');
+if (saved && saved !== 'en') setLang(saved);
+</script>
+
+</body>
+</html>
