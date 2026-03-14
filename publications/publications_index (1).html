@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications - Mădălina Zgreabăn</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background: white;
+      color: #000;
+      padding-bottom: 80px;
+    }
+
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem 2rem;
+    }
+
+    .retro-section {
+      display: grid;
+      grid-template-columns: 260px 120px 1fr;
+      column-gap: 60px;
+      row-gap: 12px;
+      margin-top: 5rem;
+      align-items: start;
+    }
+
+    .retro-section:first-child { margin-top: 0; }
+
+    .retro-section h2 {
+      grid-column: 1;
+      margin: 0;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      color: #CC0000;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding-top: 0.3rem;
+      line-height: 1.3;
+    }
+
+    .year {
+      grid-column: 2;
+      font-size: 1.2rem;
+      color: #CC0000;
+      letter-spacing: 0px;
+      margin: 1rem 0 0.5rem;
+      font-weight: 400;
+    }
+
+    .item {
+      grid-column: 3;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .item .title {
+      font-size: 1.4rem;
+      color: #CC0000;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .item .meta { font-size: 1.05rem; color: #000; margin-bottom: 0.2rem; }
+    .item .venue { font-size: 1.05rem; color: #000; font-style: italic; margin-bottom: 0.3rem; }
+
+    .item .links { font-size: 0.9rem; margin-top: 0.3rem; }
+
+    .item .links a {
+      color: #CC0000;
+      text-decoration: none;
+      margin-right: 0.8rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .item .links a:hover { border-bottom-color: #CC0000; }
+
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 1px solid #000;
+      padding: 1.2rem 2rem;
+      display: flex;
+      gap: 2.5rem;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      z-index: 1000;
+      align-items: center;
+    }
+
+    nav a { color: #666; text-decoration: none; transition: color 0.2s ease; }
+    nav a:hover { color: #CC0000; }
+    nav a.active { color: #CC0000; }
+
+    .lang-toggle {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border: 1px solid #000;
+      overflow: hidden;
+    }
+
+    .lang-toggle button {
+      background: none;
+      border: none;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.7rem;
+      font-family: Helvetica, Arial, sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: #666;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .lang-toggle button.active { background: #CC0000; color: white; }
+    .lang-toggle button:not(.active):hover { color: #CC0000; }
+
+    @media (max-width: 1200px) {
+      .retro-section { grid-template-columns: 220px 100px 1fr; column-gap: 40px; }
+    }
+
+    @media (max-width: 900px) {
+      main { padding: 2rem 1.5rem 4rem; }
+      .retro-section { grid-template-columns: 1fr; gap: 0.5rem; }
+      .retro-section h2 { margin-bottom: 1rem; }
+      .year { grid-column: 1; margin: 1.5rem 0 0.5rem; font-weight: 600; }
+      .item { grid-column: 1; }
+      nav { flex-wrap: wrap; gap: 1.5rem; padding: 1rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<main>
+
+  <!-- PUBLICATIONS (PEER-REVIEW) -->
+  <section class="retro-section">
+    <h2 data-i18n="sec-peer">PUBLICATIONS (PEER-REVIEW)</h2>
+
+    <div class="year">2025</div>
+    <div class="item">
+      <div class="title" data-i18n="pub-merge-title">MERGE: Minimal Expression-Replacement GEneralization Test for Natural Language Inference</div>
+      <div class="meta">Zgreabăn · Deoskar · Abzianidze</div>
+      <div class="venue">arXiv preprint arXiv:2510.24295</div>
+      <div class="links"><a href="https://arxiv.org/abs/2510.24295">[paper]</a></div>
+    </div>
+
+    <div class="item">
+      <div class="title" data-i18n="pub-hitorbe-title">Hit or Be Hit: Tests of (Pre) Compositional Abilities in Vision and Language Models</div>
+      <div class="meta">Zgreabăn · Gatt · Mosteiro</div>
+      <div class="venue">Proceedings of KONVENS 2025 · pp. 306–317</div>
+      <div class="links"><a href="https://aclanthology.org/2025.konvens-1.26.pdf">[paper]</a></div>
+    </div>
+
+    <div class="year">2024</div>
+    <div class="item">
+      <div class="title" data-i18n="pub-bilingual-title">Using a bilingual dual-path model for exploring syntactic mixing of simultaneous bilingual children</div>
+      <div class="meta">Zgreabăn · Stasica</div>
+      <div class="venue">LingUU 7(2) · 39–52</div>
+      <div class="links"><a href="https://linguujournal.nl/wp-content/uploads/2024/05/LingUU-7.2-Official.pdf">[paper]</a></div>
+    </div>
+
+    <div class="year">2023</div>
+    <div class="item">
+      <div class="title" data-i18n="pub-chatgpt-title">Prompting ChatGPT to Draw Morphological Connections for New Word Comprehension</div>
+      <div class="meta">Zgreabăn · Suresh</div>
+      <div class="venue">RANLP Student Research Workshop · pp. 98–107</div>
+      <div class="links"><a href="https://aclanthology.org/2023.ranlp-stud.11.pdf">[paper]</a></div>
+    </div>
+
+    <div class="item">
+      <div class="title" data-i18n="pub-weakdef-title">Romanian weak definites undergo semantic incorporation</div>
+      <div class="meta">Zgreabăn</div>
+      <div class="venue">LingUU 7(1) · 5–35</div>
+      <div class="links"><a href="https://linguujournal.nl/download/romanian-weak-definites-undergo-semantic-incorporation/">[paper]</a></div>
+    </div>
+
+    <div class="year">2022</div>
+    <div class="item">
+      <div class="title" data-i18n="pub-treebank-title">A Romanian Treebank Annotated with Verbal Multiword Expressions</div>
+      <div class="meta">Barbu-Mititelu · Cristescu · Mitrofan · Zgreabăn · Bărbulescu</div>
+      <div class="venue">CLIB · pp. 137–146</div>
+      <div class="links"><a href="https://aclanthology.org/2022.clib-1.16.pdf">[paper]</a></div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS (OTHERS) -->
+  <section class="retro-section">
+    <h2 data-i18n="sec-others">PUBLICATIONS (OTHERS)</h2>
+
+    <div class="year" data-i18n="in-print">In-print</div>
+    <div class="item">
+      <div class="title" data-i18n="pub-roast-title">To Roast: a pragmatic analysis</div>
+      <div class="meta">Zgreabăn</div>
+      <div class="venue">University of Bucharest Press</div>
+    </div>
+
+    <div class="year">2024</div>
+    <div class="item">
+      <div class="title" data-i18n="pub-alignment-title">The Alignment Formula: Large Language Models and Humans' Decisions in a False-Belief Task (MA THESIS)</div>
+      <div class="meta">Zgreabăn</div>
+      <div class="venue">Archive Utrecht University</div>
+      <div class="links"><a href="https://studenttheses.uu.nl/bitstream/handle/20.500.12932/47851/Zgreaban_9397094.pdf?sequence=1">[thesis]</a></div>
+    </div>
+
+    <div class="year">2021</div>
+    <div class="item">
+      <div class="title" data-i18n="pub-roastbattle-title">Roast Battle: a view on its Pragmatics [Ro]</div>
+      <div class="meta">Zgreabăn</div>
+      <div class="venue">Observator Cultural, 1088, 14</div>
+      <div class="links"><a href="https://www.observatorcultural.ro/articol/a-lua-la-roast-o-perspectiva-pragmatica/">[paper]</a></div>
+    </div>
+
+    <div class="year">2020</div>
+    <div class="item">
+      <div class="title" data-i18n="pub-babel-title">The Library of Babel and The Turing Test [Ro]</div>
+      <div class="meta">Zgreabăn</div>
+      <div class="venue">Observator Cultural, 1040, 15</div>
+      <div class="links"><a href="https://www.observatorcultural.ro/articol/biblioteca-babel-s%cc%a6i-testul-turing/">[paper]</a></div>
+    </div>
+  </section>
+
+  <!-- TALKS -->
+  <section class="retro-section">
+    <h2 data-i18n="sec-talks">TALKS</h2>
+
+    <div class="year">2025</div>
+    <div class="item">
+      <div class="title">MERGE</div>
+      <div class="venue">CLIN · <span data-i18n="presented-by">Presented by</span> Lasha Abzianidze</div>
+      <div class="meta">Zgreabăn · Deoskar · Abzianidze</div>
+    </div>
+    <div class="item">
+      <div class="title">MERGE</div>
+      <div class="venue">NALOMA · <span data-i18n="presented-by">Presented by</span> Lasha Abzianidze</div>
+    </div>
+    <div class="item">
+      <div class="title">MERGE</div>
+      <div class="venue">Uiltjesdagen</div>
+      <div class="meta">Zgreabăn · Deoskar · Abzianidze</div>
+      <div class="links"><a href="#">[slides]</a></div>
+    </div>
+
+    <div class="year">2024</div>
+    <div class="item">
+      <div class="title" data-i18n="talk-llms-title">LLMs and Humans: Nominal Compounds Preferences</div>
+      <div class="meta">Zgreabăn · Stasica · Gomez · Paperno</div>
+      <div class="venue">SLE Workshop</div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="talk-benchmarks-title">Overview of benchmarks for vision and language models</div>
+      <div class="venue">Konstanz Linguistics Conference</div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="talk-lucdh-title">LUCDH Pilot Project Symposium</div>
+      <div class="venue">Leiden University</div>
+    </div>
+
+    <div class="year">2023</div>
+    <div class="item">
+      <div class="title" data-i18n="talk-emojis-title">Emojis and idioms in Dutch</div>
+      <div class="venue">LCC Graduate Conference</div>
+      <div class="meta">Louzada · Zgreabăn</div>
+    </div>
+
+    <div class="year">2022</div>
+    <div class="item">
+      <div class="title" data-i18n="talk-corpus-title">A Romanian Corpus Annotated with Verbal Multiword Expressions</div>
+      <div class="meta">Barbu-Mititelu · Cristescu · Mitrofan · Zgreabăn · Bărbulescu</div>
+      <div class="venue">CLIB</div>
+      <div class="links"><a href="https://youtu.be/FWpStDXnQ1k?si=ZOrIiXQVtl4uyOYS">[recording]</a></div>
+    </div>
+  </section>
+
+  <!-- POSTERS -->
+  <section class="retro-section">
+    <h2 data-i18n="sec-posters">POSTER PRESENTATIONS</h2>
+
+    <div class="year">2026</div>
+    <div class="item">
+      <div class="title" data-i18n="poster-whowhat-title">WHO WHAT WHEN DID: Multiple WH-questions in large language models</div>
+      <div class="venue">UniDive Training School</div>
+      <div class="links">
+        <a href="https://unidive.lisn.upsaclay.fr/lib/exe/fetch.php?media=meetings:other-events:2nd-training-school:38_who_what_when_did_multiple_revised_project.pdf">[abstract]</a>
+        <a href="posters/10_poster.pdf" target="_blank">[poster]</a>
+      </div>
+    </div>
+
+    <div class="year">2025</div>
+    <div class="item">
+      <div class="title">MERGE</div>
+      <div class="venue">M2L</div>
+      <div class="links"><a href="posters/9_poster.pdf" target="_blank">[poster]</a></div>
+    </div>
+    <div class="item">
+      <div class="title">MERGE</div>
+      <div class="venue">LxMLS</div>
+      <div class="links"><a href="posters/8_poster.pdf" target="_blank">[poster]</a></div>
+    </div>
+    <div class="item">
+      <div class="title">MERGE</div>
+      <div class="venue">LOT</div>
+      <div class="links"><a href="posters/7_poster.pdf" target="_blank">[poster]</a></div>
+    </div>
+
+    <div class="year">2024</div>
+    <div class="item">
+      <div class="title" data-i18n="poster-squirrel-title">The Squirrel Test: Competing forms for new words in interaction</div>
+      <div class="meta">Zhou · Zgreabăn</div>
+      <div class="venue">EMLAR · <span data-i18n="presented-by">Presented by</span> Jiayi Zhou</div>
+      <div class="links">
+        <a href="https://emlar.wp.hum.uu.nl/wp-content/uploads/sites/430/2024/04/EMLAR_-THE-SQUIRREL-TEST_Jiayi_Madalina.pdf">[abstract]</a>
+        <a href="posters/6_poster.pdf" target="_blank">[poster]</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="poster-multiwh-title">Multiple WH-questions in Large Language Models</div>
+      <div class="venue">EMLAR</div>
+      <div class="links">
+        <a href="https://emlar.wp.hum.uu.nl/wp-content/uploads/sites/430/2024/04/EMLAR_multpleWH_madalina.pdf">[abstract]</a>
+        <a href="posters/5_poster.pdf" target="_blank">[poster]</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="poster-sheffield-title">Sheffield annotation project results</div>
+      <div class="meta">Pickard · Zgreabăn · Villavicencio</div>
+      <div class="venue">UniDive General Meeting</div>
+    </div>
+
+    <div class="year">2023</div>
+    <div class="item">
+      <div class="title" data-i18n="poster-chatgpt-title">Prompting ChatGPT to Draw Morphological Connections</div>
+      <div class="meta">Zgreabăn · Suresh</div>
+      <div class="venue">RANLP</div>
+      <div class="links"><a href="posters/3_poster.pdf" target="_blank">[poster]</a></div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="poster-emojis-title">Processing costs of substituting Dutch idiomatic expressions with emojis</div>
+      <div class="meta">Louzada · Zgreabăn</div>
+      <div class="venue">EMLAR</div>
+      <div class="links"><a href="posters/2_poster.pdf" target="_blank">[poster]</a></div>
+    </div>
+    <div class="item">
+      <div class="title" data-i18n="poster-roasts-title">COMEDY ROASTS: saving and enhancing face through insults</div>
+      <div class="venue">LOT Winter School</div>
+      <div class="links"><a href="posters/1_poster.png" target="_blank">[poster]</a></div>
+    </div>
+  </section>
+
+  <!-- COLLOQUIUMS -->
+  <section class="retro-section">
+    <h2 data-i18n="sec-colloq">COLLOQUIUMS, WORKSHOPS & SYMPOSIA</h2>
+
+    <div class="year">2024</div>
+    <div class="item">
+      <div class="title" data-i18n="colloq-unidive2-title">UniDive 2nd General Meeting</div>
+      <div class="venue">University of Naples "L'Orientale"</div>
+    </div>
+
+    <div class="year">2023</div>
+    <div class="item">
+      <div class="title" data-i18n="colloq-unidive1-title">UniDive 1st General Meeting</div>
+      <div class="venue">Paris-Saclay University</div>
+    </div>
+
+    <div class="year">2022</div>
+    <div class="item">
+      <div class="title">Best Letters</div>
+      <div class="venue">University of Bucharest</div>
+    </div>
+
+    <div class="year">2021</div>
+    <div class="item">
+      <div class="title" data-i18n="colloq-beyond-title">Beyond Language Scientific National Symposium</div>
+      <div class="venue">Craiova University</div>
+    </div>
+  </section>
+
+</main>
+
+<nav>
+  <a href="/index.html" id="nav-about">About</a>
+  <a href="/publications/index.html" class="active" id="nav-publications">Publications</a>
+  <a href="/activity_log.html" id="nav-activity">Activity log</a>
+  <div class="lang-toggle">
+    <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+    <button id="btn-ro" onclick="setLang('ro')">RO</button>
+  </div>
+</nav>
+
+<script>
+const i18n = {
+  en: {
+    'sec-peer': 'PUBLICATIONS (PEER-REVIEW)',
+    'sec-others': 'PUBLICATIONS (OTHERS)',
+    'sec-talks': 'TALKS',
+    'sec-posters': 'POSTER PRESENTATIONS',
+    'sec-colloq': 'COLLOQUIUMS, WORKSHOPS & SYMPOSIA',
+    'in-print': 'In-print',
+    'presented-by': 'Presented by',
+    'nav-about': 'About',
+    'nav-publications': 'Publications',
+    'nav-activity': 'Activity log',
+    'pub-merge-title': 'MERGE: Minimal Expression-Replacement GEneralization Test for Natural Language Inference',
+    'pub-hitorbe-title': 'Hit or Be Hit: Tests of (Pre) Compositional Abilities in Vision and Language Models',
+    'pub-bilingual-title': 'Using a bilingual dual-path model for exploring syntactic mixing of simultaneous bilingual children',
+    'pub-chatgpt-title': 'Prompting ChatGPT to Draw Morphological Connections for New Word Comprehension',
+    'pub-weakdef-title': 'Romanian weak definites undergo semantic incorporation',
+    'pub-treebank-title': 'A Romanian Treebank Annotated with Verbal Multiword Expressions',
+    'pub-roast-title': 'To Roast: a pragmatic analysis',
+    'pub-alignment-title': "The Alignment Formula: Large Language Models and Humans' Decisions in a False-Belief Task (MA THESIS)",
+    'pub-roastbattle-title': 'Roast Battle: a view on its Pragmatics [Ro]',
+    'pub-babel-title': 'The Library of Babel and The Turing Test [Ro]',
+    'talk-llms-title': 'LLMs and Humans: Nominal Compounds Preferences',
+    'talk-benchmarks-title': 'Overview of benchmarks for vision and language models',
+    'talk-lucdh-title': 'LUCDH Pilot Project Symposium',
+    'talk-emojis-title': 'Emojis and idioms in Dutch',
+    'talk-corpus-title': 'A Romanian Corpus Annotated with Verbal Multiword Expressions',
+    'poster-whowhat-title': 'WHO WHAT WHEN DID: Multiple WH-questions in large language models',
+    'poster-squirrel-title': 'The Squirrel Test: Competing forms for new words in interaction',
+    'poster-multiwh-title': 'Multiple WH-questions in Large Language Models',
+    'poster-sheffield-title': 'Sheffield annotation project results',
+    'poster-chatgpt-title': 'Prompting ChatGPT to Draw Morphological Connections',
+    'poster-emojis-title': 'Processing costs of substituting Dutch idiomatic expressions with emojis',
+    'poster-roasts-title': 'COMEDY ROASTS: saving and enhancing face through insults',
+    'colloq-unidive2-title': 'UniDive 2nd General Meeting',
+    'colloq-unidive1-title': 'UniDive 1st General Meeting',
+    'colloq-beyond-title': 'Beyond Language Scientific National Symposium',
+  },
+  ro: {
+    'sec-peer': 'PUBLICAȚII (RECENZATE)',
+    'sec-others': 'PUBLICAȚII (ALTELE)',
+    'sec-talks': 'PREZENTĂRI ORALE',
+    'sec-posters': 'PREZENTĂRI POSTER',
+    'sec-colloq': 'CONFERINȚE, WORKSHOP-URI & SIMPOZIOANE',
+    'in-print': 'În tipar',
+    'presented-by': 'Prezentat de',
+    'nav-about': 'Despre',
+    'nav-publications': 'Publicații',
+    'nav-activity': 'Jurnal de activitate',
+    'pub-merge-title': 'MERGE: Test de Generalizare prin Înlocuire Minimală de Expresii pentru NLI',
+    'pub-hitorbe-title': 'Lovește sau Fii Lovit: Teste ale Abilităților (Pre)Compoziționale în Modele Multimodale',
+    'pub-bilingual-title': 'Utilizarea unui model dual bilingv pentru explorarea amestecului sintactic',
+    'pub-chatgpt-title': 'Promptarea ChatGPT în a Face Conexiuni Morfologice pentru Înțelegerea Cuvintelor Noi',
+    'pub-weakdef-title': 'Definitele slabe românești sunt supuse incorporării semantice',
+    'pub-treebank-title': 'Un Treebank Românesc Adnotat cu Expresii Multiword Verbale',
+    'pub-roast-title': 'A lua la roast: o analiză pragmatică',
+    'pub-alignment-title': 'Formula Alinierii: Deciziile Modelelor Lingvistice Mari și ale Oamenilor într-o Sarcină de Credință Falsă (DIZERTAȚIE)',
+    'pub-roastbattle-title': 'A lua la roast: o perspectivă pragmatică',
+    'pub-babel-title': 'Biblioteca Babel și testul Turing',
+    'talk-llms-title': 'Modele lingvistice mari și oamenii: preferințe nominale',
+    'talk-benchmarks-title': 'Prezentare generală a benchmark-urilor pentru modele multimodale',
+    'talk-lucdh-title': 'Simpozionul Proiectelor Pilot LUCDH',
+    'talk-emojis-title': 'Emoji-uri și expresii idiomatice în neerlandeză',
+    'talk-corpus-title': 'Un Corpus Românesc Adnotat cu Expresii Multiword Verbale',
+    'poster-whowhat-title': 'CINE CE CUM CÂND: Întrebări multiple în modele lingvistice mari',
+    'poster-squirrel-title': 'Testul veveriței: Forme concurente pentru cuvinte noi în interacțiune',
+    'poster-multiwh-title': 'Întrebări multiple în modele lingvistice mari',
+    'poster-sheffield-title': 'Rezultatele proiectului de adnotare Sheffield',
+    'poster-chatgpt-title': 'Promptarea ChatGPT pentru a forma conexiuni morfologice',
+    'poster-emojis-title': 'Costurile procesării substituirii expresiilor idiomatice neerlandeze cu emoji-uri',
+    'poster-roasts-title': 'Roast-uri comice: salvarea și îmbunătățirea imaginii prin insulte',
+    'colloq-unidive2-title': 'A 2-a Întâlnire Generală UniDive',
+    'colloq-unidive1-title': 'A 1-a Întâlnire Generală UniDive',
+    'colloq-beyond-title': 'Simpozionul Național Științific Beyond Language',
+  }
+};
+
+function setLang(lang) {
+  const t = i18n[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key]) el.textContent = t[key];
+  });
+  document.getElementById('nav-about').textContent = t['nav-about'];
+  document.getElementById('nav-publications').textContent = t['nav-publications'];
+  document.getElementById('nav-activity').textContent = t['nav-activity'];
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ro').classList.toggle('active', lang === 'ro');
+  document.documentElement.lang = lang;
+  localStorage.setItem('lang', lang);
+}
+
+const saved = localStorage.getItem('lang');
+if (saved && saved !== 'en') setLang(saved);
+</script>
+
+</body>
+</html>
