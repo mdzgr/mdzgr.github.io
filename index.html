@@ -30,8 +30,6 @@
     margin: 0 auto;
   }
 
-  /* ---------- header (kept centered — this part stays a title block) ---------- */
-
   .header { text-align: center; }
 
   h1 {
@@ -73,7 +71,7 @@
   nav.jump a { color: var(--muted); text-decoration: none; margin: 0 0.35rem; }
   nav.jump a:hover { color: var(--red); }
 
-  /* ---------- sections: flush left/right rows ---------- */
+  
 
   section { margin-bottom: 2.8rem; }
 
@@ -135,9 +133,9 @@
       <a href="https://github.com/mdzgr">GitHub</a>
       <a href="cv.pdf">CV</a>
     </div>
-    <p class="bio" id="bio1"><strong>Second-year PhD candidate</strong> in NLP at Utrecht University researching generalizability and explainability in LLMs, with a focus on reasoning, benchmarks, and explanations. Supervised by Lasha Abzianidze, Tejaswini Deoskar, and Yoad Winter.</p>
-    <p class="bio" id="bio2">I hold a BA in literature and linguistics from the University of Bucharest and a research MA in linguistics from Utrecht University (Bright Minds Fellow). My research interests have spanned (so far) from multimodal LLMs to humor and comedy roasts, among others.</p>
-    <p class="bio" id="bio3">I am also into critical AI, alternative tech frameworks, creative practice (previously trained as a writer), tech policy and leadership and educational projects.</p>
+    <p class="bio" id="bio1"><strong>Second-year PhD candidate</strong> in NLP at Utrecht University. Topics: generalizability and explainability in LLMs, with a focus on reasoning, benchmarks, and explanations. Supervisors: Lasha Abzianidze, Tejaswini Deoskar, and Yoad Winter.</p>
+    <p class="bio" id="bio2"> Graduated from University of Bucharest with a BA in literature and linguistics, and from Utrecht University with a research MA in linguistics, where I was a Bright Minds Fellow. My research interests have spanned (so far) from multimodal LLMs to humor and comedy roasts, among others.</p>
+    <p class="bio" id="bio3"> Outside of my academic work, I take interest in creative multimedia, leadership, & alternative/slow tech projects or tech policies.</p>
     <div class="lang-toggle">
       <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
       <button id="btn-ro" onclick="setLang('ro')">RO</button>
@@ -152,11 +150,10 @@
 </main>
 
 <script>
-/* ---------- data ---------- */
-// kind: 'pub' (title · authors · venue), 'plain' (title · venue) — authors dropped for talks/posters/colloq/etc per request
+
 const sections = [
   { id: 'pubs-peer', header: 'sec-peer', kind: 'pub', items: [
-    { titleKey: 'pub-merge-title', authors: 'Zgreabăn · Deoskar · Abzianidze', venue: 'arXiv preprint arXiv:2510.24295', year: '2025', links: [['paper','https://arxiv.org/abs/2510.24295']] },
+    { titleKey: 'pub-merge-title', authors: 'Zgreabăn · Deoskar · Abzianidze', venue: 'arXiv preprint arXiv:2510.24295', year: '2026', links: [['paper','https://arxiv.org/abs/2510.24295']] },
     { titleKey: 'pub-hitorbe-title', authors: 'Zgreabăn · Gatt · Mosteiro', venue: 'KONVENS 2025 · pp. 306–317', year: '2025', links: [['paper','https://aclanthology.org/2025.konvens-1.26.pdf']] },
     { titleKey: 'pub-bilingual-title', authors: 'Zgreabăn · Stasica', venue: 'LingUU 7(2) · 39–52', year: '2024', links: [['paper','https://linguujournal.nl/wp-content/uploads/2024/05/LingUU-7.2-Official.pdf']] },
     { titleKey: 'pub-chatgpt-title', authors: 'Zgreabăn · Suresh', venue: 'RANLP SRW · pp. 98–107', year: '2023', links: [['paper','https://aclanthology.org/2023.ranlp-stud.11.pdf']] },
@@ -170,6 +167,8 @@ const sections = [
     { titleKey: 'pub-babel-title', authors: 'Zgreabăn', venue: 'Observator Cultural, 1040, 15', year: '2020', links: [['paper','https://www.observatorcultural.ro/articol/biblioteca-babel-s%cc%a6i-testul-turing/']] },
   ]},
   { id: 'talks', header: 'sec-talks', kind: 'plain', items: [
+    { title: 'NLI & MERGE', venue: 'NLP AI MA Course UU', year: '2026' },
+    { title: 'MERGE', venue: 'NLP Reading Group UU', year: '2025' },
     { title: 'MERGE', venue: 'CLIN', year: '2025' },
     { title: 'MERGE', venue: 'NALOMA', year: '2025' },
     { title: 'MERGE', venue: 'Uiltjesdagen', year: '2025', links: [['slides','#']] },
@@ -206,6 +205,7 @@ const sections = [
     { titleKey: 'rj6-title', metaKey: 'rj6-meta', venue: 'The Romanian Academy', year: '2021–22' },
   ]},
   { id: 'teaching', header: 'sec-teaching', kind: 'meta', items: [
+    { titleKey: 'teach3-title', metaKey: 'teach3-meta', venue: 'Utrecht University', year: '2026' },
     { titleKey: 'teach1-title', metaKey: 'teach1-meta', venue: 'Utrecht University', year: '2026' },
     { titleKey: 'teach2-title', metaKey: 'teach2-meta', venue: 'Utrecht University', year: '2024' },
   ]},
@@ -246,6 +246,7 @@ const sections = [
     { titleKey: 'ss8-title', metaKey: 'ss8-meta', venue: 'Harvard University', year: '2021' },
   ]},
   { id: 'leadership', header: 'sec-leadership', kind: 'meta', items: [
+    { title: 'MENTOR AFIST', metaKey: 'lead9-meta', venue: 'AFIST Romania', year: '2026' },
     { title: 'EMLAR', metaKey: 'lead1-meta', venue: 'Utrecht University', year: '2025' },
     { titleKey: 'lead2-title', metaKey: 'lead2-meta', venue: 'Netherlands National Graduate School of Linguistics', year: '2024' },
     { titleKey: 'lead3-title', metaKey: 'lead3-meta', venue: 'Utrecht University', year: '2024' },
@@ -295,6 +296,7 @@ const i18n = {
     'rj6-title': 'Research Contributor', 'rj6-meta': "Co-wrote 'A Romanian Corpus Annotated with Verbal Multiword Expressions'.",
     'teach1-title': 'Lecturer', 'teach1-meta': 'Taught a lecture on Regex in the Digital Tools and Methods course.',
     'teach2-title': 'Teaching Assistant', 'teach2-meta': 'Course on A.I. & psycholinguistics. Supervised 30 NLP research proposals.',
+    'teach3-title': 'Teaching Assistant', 'teach3-meta': 'NLP AI Msc Course. Held labs, graded programming assignments, held a lecture on NLI and & MERGE.'
     'grant1-title': 'Short-Term Scientific Mission Research Grant',
     'award1-title': 'Humanities Conference Grant Award', 'award2-title': 'Bright Minds Fellowship*',
     'award3-title': 'Humanities Conference Grant Award', 'award4-title': 'Craving Science? Discover Conferences! Grant',
@@ -308,6 +310,7 @@ const i18n = {
     'ss6-title': '"Logic and Transdisciplinarity" Research School', 'ss6-meta': 'Graduate Level Programme',
     'ss7-title': 'Languages in Europe and their Diachronies School', 'ss8-title': 'Institute for World Literature',
     'ss8-meta': 'Graduate Level Programme',
+    'lead9-meta': 'Mentored young women wishing to pursue STEM careers'
     'lead1-meta': 'Co-organizer; linguistics conference.', 'lead2-title': 'Lingathon (funded by LOT)',
     'lead2-meta': 'Co-organizer; first national linguistics hackathon for RMA/PhD students.',
     'lead3-title': 'A cup of linguistics', 'lead3-meta': 'Co-organizer; seminar meetings for RMA/PhD student research talks.',
@@ -354,6 +357,7 @@ const i18n = {
     'rj6-title': 'Contributor Cercetător', 'rj6-meta': "Co-autoare a lucrării 'Un Treebank Românesc Adnotat cu Expresii Multiword Verbale'.",
     'teach1-title': 'Lector', 'teach1-meta': 'Curs despre Instrumente și Metode Digitale.',
     'teach2-title': 'Asistent', 'teach2-meta': 'Curs despre I.A. și psiholingvistică. Supervizare 30 propuneri de cercetare NLP.',
+    'teach3-title': 'Asistent', 'teach3-meta': 'Curs Msc NLP AI. Susținut și corectate proiecte pentru laboratoare, dar și un curs despre NLI și MERGE.'
     'grant1-title': 'Grant de Cercetare pentru Misiune Științifică de Scurtă Durată',
     'award1-title': 'Grant pentru Conferințe în Științe Umaniste', 'award2-title': 'Bursă Bright Minds*',
     'award3-title': 'Grant pentru Conferințe în Științe Umaniste', 'award4-title': 'Grant „Craving Science? Discover Conferences!"',
@@ -366,7 +370,9 @@ const i18n = {
     'ss5-title': 'Școala de Iarnă ML pentru Viziune pe Calculator (MLWS-CV)',
     'ss6-title': 'Școala „Logică și Transdisciplinaritate"', 'ss6-meta': 'Program de Nivel Doctoral',
     'ss7-title': 'Școala Limbilor Europene și Diacroniile Lor', 'ss8-title': 'Institutul de Literatură Mondială',
-    'ss8-meta': 'Program de Nivel Doctoral',
+    'ss8-meta': 'Doctorat',
+
+    'lead9-meta': 'Mentor pentru tinere ce vor să urmeze o carieră în STEM', 
     'lead1-meta': 'Co-organizatoare; conferință de lingvistică.', 'lead2-title': 'Lingathon (finanțat de LOT)',
     'lead2-meta': 'Co-organizatoare; primul hackathon național de lingvistică pentru RMA/doctoranzi.',
     'lead3-title': 'O ceașcă de lingvistică', 'lead3-meta': 'Co-organizatoare; întâlniri de seminar pentru RMA/doctoranzi.',
@@ -415,14 +421,14 @@ function render(lang) {
 function setLang(lang) {
   render(lang);
   document.getElementById('bio1').innerHTML = lang === 'ro'
-    ? '<strong>Doctorandă în anul doi </strong> în NLP la Universitatea din Utrecht, cercetând generalizabilitatea și explicabilitatea modelelor lingvistice de mari dimensiuni, cu focus pe logică, și evaluare. Coordonată de Lasha Abzianidze, Tejaswini Deoskar și Yoad Winter.'
-    : '<strong>Second-year PhD candidate</strong> in NLP at Utrecht University researching generalizability and explainability in LLMs, with a focus on reasoning, benchmarks, and explanations. Supervised by Lasha Abzianidze, Tejaswini Deoskar, and Yoad Winter.';
+    ? '<strong>Doctorandă în anul doi </strong> în NLP la Universitatea din Utrecht. Focus: LLMs - generalizabilitate și explicabilitate, în special aspectul logic și metodele de evaluare. Coordonatori: Lasha Abzianidze, Tejaswini Deoskar și Yoad Winter.'
+    : '<strong>'Second-year PhD candidate</strong> in NLP at Utrecht University. Topics: generalizability and explainability in LLMs, with a focus on reasoning, benchmarks, and explanations. Supervisors: Lasha Abzianidze, Tejaswini Deoskar, and Yoad Winter.';
   document.getElementById('bio2').textContent = lang === 'ro'
-    ? 'Mi-am obținut licența în literatură și lingvistică la Universitatea din București și un master de cercetare în lingvistică la Universitatea Utrecht (Bursieră Bright Minds). Interesele mele în cercetare au fost (până acum) de la modele multimodale, la umor și comedy roast-uri.'
-    : 'I hold a BA in literature and linguistics from the University of Bucharest and a research MA in linguistics from Utrecht University (Bright Minds Fellow). My research interests have spanned (so far) from multimodal LLMs to humor and comedy roasts, among others.';
+    ? 'Mi-am obținut licența în literatură și lingvistică la Universitatea din București și masterUL de cercetare în lingvistică la Universitatea Utrecht (bursieră Bright Minds). Interesele mele în cercetare au fost (până acum) de la modele multimodale, la umor și comedy roast-uri.'
+    : 'Graduated from University of Bucharest with a BA in literature and linguistics, and from Utrecht University with a research MA in linguistics, where I was a Bright Minds Fellow. My research interests have spanned (so far) from multimodal LLMs to humor and comedy roasts, among others.';
   document.getElementById('bio3').textContent = lang === 'ro'
-    ? 'Sunt interesată și de critical IA, framework-uri alternative tech, practică creativă (în trecut formată ca scriitoare), politici de tech și proiecte educaționale și de leadership.'
-    : 'I am also into critical AI, alternative tech frameworks, creative practice (previously trained as a writer), tech policy and leadership and educational projects.';
+    ? 'În afara activității mele academice, sunt interesată de proiecte creative multimedia, de leadership, ce presupun alternative/slow tech sau politici de tech.'
+    : 'Outside of my academic work, I take interest in creative multimedia, leadership, & alternative/slow tech projects or tech policies.';
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
   document.getElementById('btn-ro').classList.toggle('active', lang === 'ro');
   document.documentElement.lang = lang;
