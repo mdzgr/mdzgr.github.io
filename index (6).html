@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mădălina Zgreabăn</title>
+<style>
+  :root {
+    --paper: #ffffff;
+    --ink: #1a1a1a;
+    --muted: #969696;
+    --line: #ececec;
+    --red: #CC0000;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 11px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    padding: 4.5rem 1.25rem 6rem;
+  }
+
+  main {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* ---------- header (kept centered — this part stays a title block) ---------- */
+
+  .header { text-align: center; }
+
+  h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--red);
+    margin-bottom: 0.35rem;
+  }
+
+  .location { color: var(--muted); font-size: 0.8rem; margin-bottom: 1.3rem; }
+
+  .contact-links {
+    display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;
+    font-size: 0.75rem; margin-bottom: 2rem;
+  }
+
+  .contact-links a { color: var(--red); text-decoration: none; border-bottom: 1px solid transparent; }
+  .contact-links a:hover { border-bottom-color: var(--red); }
+
+  .bio { font-size: 0.85rem; line-height: 1.65; color: #333; margin-bottom: 0.85rem; text-align: left; }
+  .bio:last-of-type { margin-bottom: 1.8rem; }
+
+  .lang-toggle {
+    display: inline-flex; border: 1px solid var(--ink); overflow: hidden; margin-bottom: 2.4rem;
+  }
+  .lang-toggle button {
+    background: none; border: none; padding: 0.25rem 0.6rem; font-size: 0.62rem;
+    font-family: inherit; letter-spacing: 1.2px; cursor: pointer; color: var(--muted);
+  }
+  .lang-toggle button.active { background: var(--red); color: #fff; }
+  .lang-toggle button:not(.active):hover { color: var(--red); }
+
+  nav.jump {
+    font-size: 0.68rem; letter-spacing: 0.2px; color: var(--muted); line-height: 2;
+    margin-bottom: 3rem; padding-bottom: 2.4rem; border-bottom: 1px solid var(--line);
+    text-align: center;
+  }
+  nav.jump a { color: var(--muted); text-decoration: none; margin: 0 0.35rem; }
+  nav.jump a:hover { color: var(--red); }
+
+  /* ---------- sections: flush left/right rows ---------- */
+
+  section { margin-bottom: 2.8rem; }
+
+  section h2 {
+    font-size: 0.62rem; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase;
+    color: var(--red); margin-bottom: 1rem; text-align: center;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 0.3rem 0;
+  }
+
+  .row .left {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .row .t { color: var(--ink); font-weight: 600; }
+  a.t { color: var(--ink); text-decoration: none; }
+  a.t:hover { color: var(--red); }
+
+  .row .m, .row .v { color: #666; }
+  .row .v { font-style: italic; }
+  .row .sep { color: #c9c9c9; margin: 0 0.28rem; }
+
+  .row .l a { color: var(--red); text-decoration: none; margin-left: 0.4rem; font-size: 0.9em; white-space: nowrap; }
+  .row .l a:hover { border-bottom: 1px solid var(--red); }
+
+  .row .y {
+    flex: 0 0 auto;
+    color: var(--muted);
+    font-size: 0.85em;
+    white-space: nowrap;
+  }
+
+  footer { margin-top: 3rem; font-size: 0.68rem; color: var(--muted); text-align: center; }
+
+  @media (max-width: 480px) {
+    body { font-size: 11.5px; padding: 3rem 0.9rem 5rem; }
+    .row { flex-direction: column; align-items: flex-start; gap: 0.1rem; }
+    .row .y { order: -1; font-size: 0.75em; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+
+  <div class="header">
+    <h1>Mădălina Zgreabăn</h1>
+    <p class="location">Utrecht, NL</p>
+    <div class="contact-links">
+      <a href="mailto:b.m.zgreaban@uu.nl">Email</a>
+      <a href="https://scholar.google.com/citations?user=N78K32sAAAAJ&hl=en">Google Scholar</a>
+      <a href="https://github.com/mdzgr">GitHub</a>
+      <a href="cv.pdf">CV</a>
+    </div>
+    <p class="bio" id="bio1"><strong>Second-year PhD candidate</strong> in NLP at Utrecht University researching generalizability and explainability in LLMs, with a focus on reasoning, benchmarks, and explanations. Supervised by Lasha Abzianidze, Tejaswini Deoskar, and Yoad Winter.</p>
+    <p class="bio" id="bio2">I hold a BA in literature and linguistics from the University of Bucharest and a research MA in linguistics from Utrecht University (Bright Minds Fellow). My research interests have spanned (so far) from multimodal LLMs to humor and comedy roasts, among others.</p>
+    <p class="bio" id="bio3">I am also into critical AI, alternative tech frameworks, creative practice (previously trained as a writer), tech policy and leadership and educational projects.</p>
+    <div class="lang-toggle">
+      <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+      <button id="btn-ro" onclick="setLang('ro')">RO</button>
+    </div>
+    <nav class="jump" id="jumpnav"></nav>
+  </div>
+
+  <div id="sections"></div>
+
+  <footer>Mădălina Zgreabăn, 2026</footer>
+
+</main>
+
+<script>
+/* ---------- data ---------- */
+// kind: 'pub' (title · authors · venue), 'plain' (title · venue) — authors dropped for talks/posters/colloq/etc per request
+const sections = [
+  { id: 'pubs-peer', header: 'sec-peer', kind: 'pub', items: [
+    { titleKey: 'pub-merge-title', authors: 'Zgreabăn · Deoskar · Abzianidze', venue: 'arXiv preprint arXiv:2510.24295', year: '2025', links: [['paper','https://arxiv.org/abs/2510.24295']] },
+    { titleKey: 'pub-hitorbe-title', authors: 'Zgreabăn · Gatt · Mosteiro', venue: 'KONVENS 2025 · pp. 306–317', year: '2025', links: [['paper','https://aclanthology.org/2025.konvens-1.26.pdf']] },
+    { titleKey: 'pub-bilingual-title', authors: 'Zgreabăn · Stasica', venue: 'LingUU 7(2) · 39–52', year: '2024', links: [['paper','https://linguujournal.nl/wp-content/uploads/2024/05/LingUU-7.2-Official.pdf']] },
+    { titleKey: 'pub-chatgpt-title', authors: 'Zgreabăn · Suresh', venue: 'RANLP SRW · pp. 98–107', year: '2023', links: [['paper','https://aclanthology.org/2023.ranlp-stud.11.pdf']] },
+    { titleKey: 'pub-weakdef-title', authors: 'Zgreabăn', venue: 'LingUU 7(1) · 5–35', year: '2023', links: [['paper','https://linguujournal.nl/download/romanian-weak-definites-undergo-semantic-incorporation/']] },
+    { titleKey: 'pub-treebank-title', authors: 'Barbu-Mititelu · Cristescu · Mitrofan · Zgreabăn · Bărbulescu', venue: 'CLIB · pp. 137–146', year: '2022', links: [['paper','https://aclanthology.org/2022.clib-1.16.pdf']] },
+  ]},
+  { id: 'pubs-other', header: 'sec-others', kind: 'pub', items: [
+    { titleKey: 'pub-roast-title', authors: 'Zgreabăn', venue: 'University of Bucharest Press', year: 'in-print', yearI18n: true },
+    { titleKey: 'pub-alignment-title', authors: 'Zgreabăn', venue: 'Archive Utrecht University', year: '2024', links: [['thesis','https://studenttheses.uu.nl/bitstream/handle/20.500.12932/47851/Zgreaban_9397094.pdf?sequence=1']] },
+    { titleKey: 'pub-roastbattle-title', authors: 'Zgreabăn', venue: 'Observator Cultural, 1088, 14', year: '2021', links: [['paper','https://www.observatorcultural.ro/articol/a-lua-la-roast-o-perspectiva-pragmatica/']] },
+    { titleKey: 'pub-babel-title', authors: 'Zgreabăn', venue: 'Observator Cultural, 1040, 15', year: '2020', links: [['paper','https://www.observatorcultural.ro/articol/biblioteca-babel-s%cc%a6i-testul-turing/']] },
+  ]},
+  { id: 'talks', header: 'sec-talks', kind: 'plain', items: [
+    { title: 'MERGE', venue: 'CLIN', year: '2025' },
+    { title: 'MERGE', venue: 'NALOMA', year: '2025' },
+    { title: 'MERGE', venue: 'Uiltjesdagen', year: '2025', links: [['slides','#']] },
+    { titleKey: 'talk-llms-title', venue: 'SLE Workshop', year: '2024' },
+    { titleKey: 'talk-benchmarks-title', venue: 'Konstanz Linguistics Conference', year: '2024' },
+    { titleKey: 'talk-lucdh-title', venue: 'Leiden University', year: '2024' },
+    { titleKey: 'talk-emojis-title', venue: 'LCC Graduate Conference', year: '2023' },
+    { titleKey: 'talk-corpus-title', venue: 'CLIB', year: '2022', links: [['recording','https://youtu.be/FWpStDXnQ1k?si=ZOrIiXQVtl4uyOYS']] },
+  ]},
+  { id: 'posters', header: 'sec-posters', kind: 'plain', items: [
+    { titleKey: 'poster-whowhat-title', venue: 'UniDive Training School', year: '2026', links: [['abstract','https://unidive.lisn.upsaclay.fr/lib/exe/fetch.php?media=meetings:other-events:2nd-training-school:38_who_what_when_did_multiple_revised_project.pdf'],['poster','publications/posters/10_poster.pdf']] },
+    { title: 'MERGE', venue: 'M2L', year: '2025', links: [['poster','publications/posters/9_poster.pdf']] },
+    { title: 'MERGE', venue: 'LxMLS', year: '2025', links: [['poster','publications/posters/8_poster.pdf']] },
+    { title: 'MERGE', venue: 'LOT', year: '2025', links: [['poster','publications/posters/7_poster.pdf']] },
+    { titleKey: 'poster-squirrel-title', venue: 'EMLAR', year: '2024', links: [['abstract','https://emlar.wp.hum.uu.nl/wp-content/uploads/sites/430/2024/04/EMLAR_-THE-SQUIRREL-TEST_Jiayi_Madalina.pdf'],['poster','publications/posters/6_poster.pdf']] },
+    { titleKey: 'poster-multiwh-title', venue: 'EMLAR', year: '2024', links: [['abstract','https://emlar.wp.hum.uu.nl/wp-content/uploads/sites/430/2024/04/EMLAR_multpleWH_madalina.pdf'],['poster','publications/posters/5_poster.pdf']] },
+    { titleKey: 'poster-sheffield-title', venue: 'UniDive General Meeting', year: '2024' },
+    { titleKey: 'poster-chatgpt-title', venue: 'RANLP', year: '2023', links: [['poster','publications/posters/3_poster.pdf']] },
+    { titleKey: 'poster-emojis-title', venue: 'EMLAR', year: '2023', links: [['poster','publications/posters/2_poster.pdf']] },
+    { titleKey: 'poster-roasts-title', venue: 'LOT Winter School', year: '2023', links: [['poster','publications/posters/1_poster.png']] },
+  ]},
+  { id: 'colloq', header: 'sec-colloq', kind: 'plain', items: [
+    { titleKey: 'colloq-unidive2-title', venue: 'University of Naples "L\'Orientale"', year: '2024' },
+    { titleKey: 'colloq-unidive1-title', venue: 'Paris-Saclay University', year: '2023' },
+    { title: 'Best Letters', venue: 'University of Bucharest', year: '2022' },
+    { titleKey: 'colloq-beyond-title', venue: 'Craiova University', year: '2021' },
+  ]},
+  { id: 'research', header: 'sec-research', kind: 'meta', items: [
+    { titleKey: 'rj1-title', metaKey: 'rj1-meta', venue: 'Utrecht University', year: '2024' },
+    { titleKey: 'rj2-title', metaKey: 'rj2-meta', venue: 'Utrecht University', year: '2023–24' },
+    { titleKey: 'rj3-title', metaKey: 'rj3-meta', venue: 'Leiden University', year: '2023–24' },
+    { titleKey: 'rj4-title', metaKey: 'rj4-meta', venue: 'University of Sheffield', year: '2023–24' },
+    { titleKey: 'rj5-title', metaKey: 'rj5-meta', venue: 'Utrecht University', year: '2023' },
+    { titleKey: 'rj6-title', metaKey: 'rj6-meta', venue: 'The Romanian Academy', year: '2021–22' },
+  ]},
+  { id: 'teaching', header: 'sec-teaching', kind: 'meta', items: [
+    { titleKey: 'teach1-title', metaKey: 'teach1-meta', venue: 'Utrecht University', year: '2026' },
+    { titleKey: 'teach2-title', metaKey: 'teach2-meta', venue: 'Utrecht University', year: '2024' },
+  ]},
+  { id: 'grants', header: 'sec-grants', kind: 'plain', items: [
+    { titleKey: 'grant1-title', venue: 'UniDive, University of Sheffield', year: '2023' },
+  ]},
+  { id: 'awards', header: 'sec-awards', kind: 'plain', items: [
+    { titleKey: 'award1-title', venue: 'Utrecht University', year: '2024' },
+    { titleKey: 'award2-title', venue: 'Utrecht University', year: '2023' },
+    { titleKey: 'award3-title', venue: 'Utrecht University', year: '2022' },
+    { titleKey: 'award4-title', venue: 'Utrecht University', year: '2022' },
+    { titleKey: 'award5-title', venue: 'Utrecht University', year: '2022' },
+    { titleKey: 'award6-title', venue: 'University of Bucharest', year: '2021' },
+  ]},
+  { id: 'scholarships', header: 'sec-scholarships', kind: 'meta', items: [
+    { title: 'CHARM-EU Winter School', venue: 'CHARM-EU', year: '2026' },
+    { titleKey: 'sch1-title', venue: 'UniDive', year: '2025' },
+    { titleKey: 'sch2-title', venue: 'Utrecht University', year: '2024' },
+    { titleKey: 'sch3-title', year: '2021–23' },
+    { titleKey: 'sch4-title', metaKey: 'sch4-meta', venue: 'Leaders Explore', year: '2020' },
+    { titleKey: 'sch5-title', venue: 'University of Bucharest', year: '2019–22' },
+  ]},
+  { id: 'summer', header: 'sec-summer', kind: 'meta', items: [
+    { titleKey: 'ss1-title', venue: 'Yerevan State University', year: '2026' },
+    { title: 'M2L', venue: 'University of Split', year: '2025' },
+    { title: 'LxMLS', venue: 'University of Lisbon', year: '2025' },
+    { titleKey: 'ss2-title', venue: 'University of Antwerp', year: '2025' },
+    { title: 'ESSLLI', venue: 'University of Ljubljana', year: '2023' },
+    { title: '5th Summer Datathon on Linguistic Linked Open Data', venue: 'University of Zagreb', year: '2023' },
+    { title: 'EMLAR', venue: 'Utrecht University', year: '2023' },
+    { titleKey: 'ss3-title', year: '2023' },
+    { titleKey: 'ss4-title', venue: 'University of Amsterdam', year: '2023' },
+    { title: 'ESSLLI', venue: 'National University of Ireland Galway', year: '2022' },
+    { titleKey: 'ss5-title', venue: 'Duke University', year: '2022' },
+    { titleKey: 'ss6-title', metaKey: 'ss6-meta', venue: 'CIRM', year: '2022' },
+    { title: 'EMLAR', venue: 'Utrecht University · Online', year: '2022' },
+    { titleKey: 'ss7-title', venue: 'CIVIS Alliance', year: '2022' },
+    { titleKey: 'ss8-title', metaKey: 'ss8-meta', venue: 'Harvard University', year: '2021' },
+  ]},
+  { id: 'leadership', header: 'sec-leadership', kind: 'meta', items: [
+    { title: 'EMLAR', metaKey: 'lead1-meta', venue: 'Utrecht University', year: '2025' },
+    { titleKey: 'lead2-title', metaKey: 'lead2-meta', venue: 'Netherlands National Graduate School of Linguistics', year: '2024' },
+    { titleKey: 'lead3-title', metaKey: 'lead3-meta', venue: 'Utrecht University', year: '2024' },
+    { titleKey: 'lead4-title', metaKey: 'lead4-meta', venue: 'Utrecht University', year: '2023' },
+    { titleKey: 'lead5-title', metaKey: 'lead5-meta', venue: 'University of Bucharest', year: '2023' },
+    { titleKey: 'lead6-title', metaKey: 'lead6-meta', venue: 'AWE Science and Technology', year: '2022' },
+    { titleKey: 'lead7-title', metaKey: 'lead7-meta', venue: 'Leaders Explore Programme', year: '2020', links: [['website','https://capacitateplus.wixsite.com/mysite']] },
+    { titleKey: 'lead8-title', metaKey: 'lead8-meta', venue: 'Builders of the Future', year: '2019' },
+  ]},
+];
+
+const i18n = {
+  en: {
+    'sec-peer': 'Publications (peer-review)', 'sec-others': 'Publications (others)', 'sec-talks': 'Talks',
+    'sec-posters': 'Poster presentations', 'sec-colloq': 'Colloquiums, workshops & symposia',
+    'sec-research': 'Research jobs', 'sec-teaching': 'Teaching', 'sec-grants': 'Research grants*',
+    'sec-awards': 'Awards & fellowships*', 'sec-scholarships': 'Scholarships', 'sec-summer': 'Summer schools',
+    'sec-leadership': 'Leadership activities', 'in-print': 'In-print',
+    'pub-merge-title': 'MERGE: Minimal Expression-Replacement GEneralization Test for Natural Language Inference',
+    'pub-hitorbe-title': 'Hit or Be Hit: Tests of (Pre) Compositional Abilities in Vision and Language Models',
+    'pub-bilingual-title': 'Using a bilingual dual-path model for exploring syntactic mixing of simultaneous bilingual children',
+    'pub-chatgpt-title': 'Prompting ChatGPT to Draw Morphological Connections for New Word Comprehension',
+    'pub-weakdef-title': 'Romanian weak definites undergo semantic incorporation',
+    'pub-treebank-title': 'A Romanian Treebank Annotated with Verbal Multiword Expressions',
+    'pub-roast-title': 'To Roast: a pragmatic analysis',
+    'pub-alignment-title': "The Alignment Formula: LLMs and Humans' Decisions in a False-Belief Task (MA thesis)",
+    'pub-roastbattle-title': 'Roast Battle: a view on its Pragmatics [Ro]',
+    'pub-babel-title': 'The Library of Babel and The Turing Test [Ro]',
+    'talk-llms-title': 'LLMs and Humans: Nominal Compounds Preferences',
+    'talk-benchmarks-title': 'Overview of benchmarks for vision and language models',
+    'talk-lucdh-title': 'LUCDH Pilot Project Symposium', 'talk-emojis-title': 'Emojis and idioms in Dutch',
+    'talk-corpus-title': 'A Romanian Corpus Annotated with Verbal Multiword Expressions',
+    'poster-whowhat-title': 'WHO WHAT WHEN DID: Multiple WH-questions in LLMs',
+    'poster-squirrel-title': 'The Squirrel Test: Competing forms for new words in interaction',
+    'poster-multiwh-title': 'Multiple WH-questions in Large Language Models',
+    'poster-sheffield-title': 'Sheffield annotation project results',
+    'poster-chatgpt-title': 'Prompting ChatGPT to Draw Morphological Connections',
+    'poster-emojis-title': 'Processing costs of substituting Dutch idiomatic expressions with emojis',
+    'poster-roasts-title': 'Comedy roasts: saving and enhancing face through insults',
+    'colloq-unidive2-title': 'UniDive 2nd General Meeting', 'colloq-unidive1-title': 'UniDive 1st General Meeting',
+    'colloq-beyond-title': 'Beyond Language Scientific National Symposium',
+    'rj1-title': 'Research Assistant in Legal NLP*', 'rj1-meta': 'Fine-tuned a LegalBERT classifier to detect illegal consent banners.',
+    'rj2-title': 'Research Intern for Vision & Language Models*', 'rj2-meta': 'Active/passive and ditransitive sentences for the VALSE benchmark.',
+    'rj3-title': 'Research Assistant in Forensic NLP', 'rj3-meta': 'Author identification pipeline from scratch.',
+    'rj4-title': 'Visiting Researcher*', 'rj4-meta': 'Created a new dataset of Romanian nominal compounds. Crowdsourcing.',
+    'rj5-title': 'Research Assistant in Computational Semantics', 'rj5-meta': 'Checked automatic DRT & CCG discourse annotations.',
+    'rj6-title': 'Research Contributor', 'rj6-meta': "Co-wrote 'A Romanian Corpus Annotated with Verbal Multiword Expressions'.",
+    'teach1-title': 'Lecturer', 'teach1-meta': 'Taught a lecture on Regex in the Digital Tools and Methods course.',
+    'teach2-title': 'Teaching Assistant', 'teach2-meta': 'Course on A.I. & psycholinguistics. Supervised 30 NLP research proposals.',
+    'grant1-title': 'Short-Term Scientific Mission Research Grant',
+    'award1-title': 'Humanities Conference Grant Award', 'award2-title': 'Bright Minds Fellowship*',
+    'award3-title': 'Humanities Conference Grant Award', 'award4-title': 'Craving Science? Discover Conferences! Grant',
+    'award5-title': 'Bright Minds Fellowship*', 'award6-title': 'Award for Scientific Excellence',
+    'sch1-title': '2nd UniDive Training School', 'sch2-title': 'First-Generation Fund',
+    'sch3-title': 'Scholarships: IWL Harvard 2021, ESSLLI, MLWS-CV 2022, "Logic and Transdisciplinarity" Research School, Summer Datathon on Linguistic Linked Open Data, ALPS 2023',
+    'sch4-title': 'Leaders Explore Scholarship', 'sch4-meta': 'Leadership Programme', 'sch5-title': 'First Merit Scholarship',
+    'ss1-title': '2nd UniDive Training School', 'ss2-title': 'LOT Summer School',
+    'ss3-title': 'ALPS Winter School (Advanced Language Processing)', 'ss4-title': 'LOT Winter School',
+    'ss5-title': 'ML Winter School on Computer Vision (MLWS-CV)',
+    'ss6-title': '"Logic and Transdisciplinarity" Research School', 'ss6-meta': 'Graduate Level Programme',
+    'ss7-title': 'Languages in Europe and their Diachronies School', 'ss8-title': 'Institute for World Literature',
+    'ss8-meta': 'Graduate Level Programme',
+    'lead1-meta': 'Co-organizer; linguistics conference.', 'lead2-title': 'Lingathon (funded by LOT)',
+    'lead2-meta': 'Co-organizer; first national linguistics hackathon for RMA/PhD students.',
+    'lead3-title': 'A cup of linguistics', 'lead3-meta': 'Co-organizer; seminar meetings for RMA/PhD student research talks.',
+    'lead4-title': 'UtrechtInc – Ready to Start', 'lead4-meta': 'Academic entrepreneurship programme; start-up concept for customizable AI tutors.',
+    'lead5-title': 'Linguistics Association Workshop', 'lead5-meta': 'Workshop advising young researchers on careers and applications.',
+    'lead6-title': 'AFIST Mentorship Programme', 'lead6-meta': 'Mentorship on research career planning and technical skills.',
+    'lead7-title': 'Capacitate+', 'lead7-meta': 'Co-founded an online learning platform for ~300 students during the pandemic.',
+    'lead8-title': 'Design thinking competitions', 'lead8-meta': 'Youth culture hub proposal; won a design-thinking competition on urban mobility.'
+  },
+  ro: {
+    'sec-peer': 'Publicații (recenzate)', 'sec-others': 'Publicații (altele)', 'sec-talks': 'Prezentări orale',
+    'sec-posters': 'Prezentări poster', 'sec-colloq': 'Conferințe, workshop-uri & simpozioane',
+    'sec-research': 'Posturi în cercetare', 'sec-teaching': 'Posturi didactice', 'sec-grants': 'Granturi de cercetare*',
+    'sec-awards': 'Premii & burse*', 'sec-scholarships': 'Burse', 'sec-summer': 'Școli de vară',
+    'sec-leadership': 'Activități de leadership', 'in-print': 'În tipar',
+    'pub-merge-title': 'MERGE: Test de Generalizare prin Înlocuire Minimală de Expresii pentru NLI',
+    'pub-hitorbe-title': 'Lovește sau Fii Lovit: Teste ale Abilităților (Pre)Compoziționale în Modele Multimodale',
+    'pub-bilingual-title': 'Utilizarea unui model dual bilingv pentru explorarea amestecului sintactic',
+    'pub-chatgpt-title': 'Promptarea ChatGPT în a Face Conexiuni Morfologice pentru Înțelegerea Cuvintelor Noi',
+    'pub-weakdef-title': 'Definitele slabe românești sunt supuse incorporării semantice',
+    'pub-treebank-title': 'Un Treebank Românesc Adnotat cu Expresii Multiword Verbale',
+    'pub-roast-title': 'A lua la roast: o analiză pragmatică',
+    'pub-alignment-title': 'Formula Alinierii: Modele Lingvistice Mari și Oamenii într-o Sarcină de Credință Falsă (Disertație)',
+    'pub-roastbattle-title': 'A lua la roast: o perspectivă pragmatică',
+    'pub-babel-title': 'Biblioteca Babel și testul Turing',
+    'talk-llms-title': 'Modele lingvistice mari și oamenii: preferințe nominale',
+    'talk-benchmarks-title': 'Prezentare generală a benchmark-urilor pentru modele multimodale',
+    'talk-lucdh-title': 'Simpozionul Proiectelor Pilot LUCDH', 'talk-emojis-title': 'Emoji-uri și expresii idiomatice în neerlandeză',
+    'talk-corpus-title': 'Un Treebank Românesc Adnotat cu Expresii Multiword Verbale',
+    'poster-whowhat-title': 'CINE CE CUM CÂND: Întrebări multiple în modele lingvistice mari',
+    'poster-squirrel-title': 'Testul veveriței: Forme concurente pentru cuvinte noi în interacțiune',
+    'poster-multiwh-title': 'Întrebări multiple în modele lingvistice mari',
+    'poster-sheffield-title': 'Rezultatele proiectului de adnotare Sheffield',
+    'poster-chatgpt-title': 'Promptarea ChatGPT pentru a forma conexiuni morfologice',
+    'poster-emojis-title': 'Costurile procesării substituirii expresiilor idiomatice neerlandeze cu emoji-uri',
+    'poster-roasts-title': 'Roast-uri comice: salvarea și îmbunătățirea imaginii prin insulte',
+    'colloq-unidive2-title': 'A 2-a Întâlnire Generală UniDive', 'colloq-unidive1-title': 'A 1-a Întâlnire Generală UniDive',
+    'colloq-beyond-title': 'Simpozionul Național Științific Beyond Language',
+    'rj1-title': 'Asistent de cercetare în NLP Juridic*', 'rj1-meta': 'Clasificator LegalBERT pentru detectarea bannerelor de consimțământ ilegale.',
+    'rj2-title': 'Internship în cercetare pentru Modele Multimodale*', 'rj2-meta': 'Propoziții active/pasive și ditransitive pentru benchmark-ul VALSE.',
+    'rj3-title': 'Asistent de cercetare în NLP Criminalistic', 'rj3-meta': 'Pipeline de identificare a autorului de la zero.',
+    'rj4-title': 'Cercetătoare*', 'rj4-meta': 'Dataset nou pentru compuse nominale românești. Crowdsourcing.',
+    'rj5-title': 'Asistent de cercetare în Semantică Computațională', 'rj5-meta': 'Verificare adnotări automate de discurs DRT & CCG.',
+    'rj6-title': 'Contributor Cercetător', 'rj6-meta': "Co-autoare a lucrării 'Un Treebank Românesc Adnotat cu Expresii Multiword Verbale'.",
+    'teach1-title': 'Lector', 'teach1-meta': 'Curs despre Instrumente și Metode Digitale.',
+    'teach2-title': 'Asistent', 'teach2-meta': 'Curs despre I.A. și psiholingvistică. Supervizare 30 propuneri de cercetare NLP.',
+    'grant1-title': 'Grant de Cercetare pentru Misiune Științifică de Scurtă Durată',
+    'award1-title': 'Grant pentru Conferințe în Științe Umaniste', 'award2-title': 'Bursă Bright Minds*',
+    'award3-title': 'Grant pentru Conferințe în Științe Umaniste', 'award4-title': 'Grant „Craving Science? Discover Conferences!"',
+    'award5-title': 'Bursă Bright Minds*', 'award6-title': 'Premiu pentru Excelență Științifică',
+    'sch1-title': 'A 2-a Școală de Formare UniDive', 'sch2-title': 'Fondul pentru prima generație care merge la universitate',
+    'sch3-title': 'Burse: IWL Harvard 2021, ESSLLI, MLWS-CV 2022, Școala „Logică și Transdisciplinaritate", Datathon LOD, ALPS 2023',
+    'sch4-title': 'Bursă Leaders Explore', 'sch4-meta': 'Program de Leadership', 'sch5-title': 'Bursă de Merit I',
+    'ss1-title': 'A 2-a Școală de Formare UniDive', 'ss2-title': 'Școala de Vară LOT',
+    'ss3-title': 'Școala de Iarnă ALPS (Procesare Avansată a Limbajului)', 'ss4-title': 'Școala de Iarnă LOT',
+    'ss5-title': 'Școala de Iarnă ML pentru Viziune pe Calculator (MLWS-CV)',
+    'ss6-title': 'Școala „Logică și Transdisciplinaritate"', 'ss6-meta': 'Program de Nivel Doctoral',
+    'ss7-title': 'Școala Limbilor Europene și Diacroniile Lor', 'ss8-title': 'Institutul de Literatură Mondială',
+    'ss8-meta': 'Program de Nivel Doctoral',
+    'lead1-meta': 'Co-organizatoare; conferință de lingvistică.', 'lead2-title': 'Lingathon (finanțat de LOT)',
+    'lead2-meta': 'Co-organizatoare; primul hackathon național de lingvistică pentru RMA/doctoranzi.',
+    'lead3-title': 'O ceașcă de lingvistică', 'lead3-meta': 'Co-organizatoare; întâlniri de seminar pentru RMA/doctoranzi.',
+    'lead4-title': 'UtrechtInc – Ready to Start', 'lead4-meta': 'Program de antreprenoriat academic; concept de start-up pentru tutori AI.',
+    'lead5-title': 'Atelier al Asociației de Lingvistică', 'lead5-meta': 'Atelier de consiliere pentru tinerii cercetători.',
+    'lead6-title': 'Programul de Mentorat AFIST', 'lead6-meta': 'Mentorat pe planificarea carierei și competențe tehnice.',
+    'lead7-title': 'Capacitate+', 'lead7-meta': 'Platformă de învățare online pentru ~300 de elevi în timpul pandemiei.',
+    'lead8-title': 'Concursuri de design thinking', 'lead8-meta': 'Design pentru centru cultural pentru tineret; câștigat concurs pe mobilitate urbană.'
+  }
+};
+
+function esc(s){ return s; }
+
+function renderRow(item, lang) {
+  const t = i18n[lang];
+  const title = item.titleKey ? (t[item.titleKey] || item.titleKey) : item.title;
+  const meta = item.metaKey ? (t[item.metaKey] || '') : (item.meta || '');
+  const year = item.yearI18n ? (t['in-print'] || item.year) : item.year;
+
+  let left = `<span class="t">${title}</span>`;
+  if (item.authors) left += `<span class="sep">·</span><span class="m">${item.authors}</span>`;
+  if (meta) left += `<span class="sep">·</span><span class="m">${meta}</span>`;
+  if (item.venue) left += `<span class="sep">·</span><span class="v">${item.venue}</span>`;
+  if (item.links) {
+    left += `<span class="l">` + item.links.map(([label,url]) => `<a href="${url}" target="_blank">[${label}]</a>`).join('') + `</span>`;
+  }
+
+  return `<div class="row"><div class="left">${left}</div><div class="y">${year}</div></div>`;
+}
+
+function render(lang) {
+  const t = i18n[lang];
+  const container = document.getElementById('sections');
+  container.innerHTML = sections.map(sec => `
+    <section id="${sec.id}">
+      <h2>${t[sec.header]}</h2>
+      ${sec.items.map(it => renderRow(it, lang)).join('')}
+    </section>
+  `).join('');
+
+  document.getElementById('jumpnav').innerHTML = sections.map(sec =>
+    `<a href="#${sec.id}">${t[sec.header]}</a>`
+  ).join('·');
+}
+
+function setLang(lang) {
+  render(lang);
+  document.getElementById('bio1').innerHTML = lang === 'ro'
+    ? '<strong>Doctorandă în anul doi </strong> în NLP la Universitatea din Utrecht, cercetând generalizabilitatea și explicabilitatea modelelor lingvistice de mari dimensiuni, cu focus pe logică, și evaluare. Coordonată de Lasha Abzianidze, Tejaswini Deoskar și Yoad Winter.'
+    : '<strong>Second-year PhD candidate</strong> in NLP at Utrecht University researching generalizability and explainability in LLMs, with a focus on reasoning, benchmarks, and explanations. Supervised by Lasha Abzianidze, Tejaswini Deoskar, and Yoad Winter.';
+  document.getElementById('bio2').textContent = lang === 'ro'
+    ? 'Mi-am obținut licența în literatură și lingvistică la Universitatea din București și un master de cercetare în lingvistică la Universitatea Utrecht (Bursieră Bright Minds). Interesele mele în cercetare au fost (până acum) de la modele multimodale, la umor și comedy roast-uri.'
+    : 'I hold a BA in literature and linguistics from the University of Bucharest and a research MA in linguistics from Utrecht University (Bright Minds Fellow). My research interests have spanned (so far) from multimodal LLMs to humor and comedy roasts, among others.';
+  document.getElementById('bio3').textContent = lang === 'ro'
+    ? 'Sunt interesată și de critical IA, framework-uri alternative tech, practică creativă (în trecut formată ca scriitoare), politici de tech și proiecte educaționale și de leadership.'
+    : 'I am also into critical AI, alternative tech frameworks, creative practice (previously trained as a writer), tech policy and leadership and educational projects.';
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ro').classList.toggle('active', lang === 'ro');
+  document.documentElement.lang = lang;
+  localStorage.setItem('lang', lang);
+}
+
+const saved = localStorage.getItem('lang') || 'en';
+setLang(saved);
+</script>
+
+</body>
+</html>
