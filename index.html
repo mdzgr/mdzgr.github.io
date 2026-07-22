@@ -71,8 +71,6 @@
   nav.jump a { color: var(--muted); text-decoration: none; margin: 0 0.35rem; }
   nav.jump a:hover { color: var(--red); }
 
-  
-
   section { margin-bottom: 2.8rem; }
 
   section h2 {
@@ -111,6 +109,13 @@
     white-space: nowrap;
   }
 
+  .textline {
+    text-align: center;
+    margin-bottom: 0.55rem;
+    font-size: 1em;
+  }
+  .textline.reach { color: var(--red); font-weight: 600; margin-top: 0.7rem; }
+
   footer { margin-top: 3rem; font-size: 0.68rem; color: var(--muted); text-align: center; }
 
   @media (max-width: 480px) {
@@ -134,8 +139,8 @@
       <a href="cv.pdf">CV</a>
     </div>
     <p class="bio" id="bio1"><strong>Second-year PhD candidate</strong> in NLP at Utrecht University. Topics: generalizability and explainability in LLMs, with a focus on reasoning, benchmarks, and explanations. Supervisors: Lasha Abzianidze, Tejaswini Deoskar, and Yoad Winter.</p>
-    <p class="bio" id="bio2"> Graduated from University of Bucharest with a BA in literature and linguistics, and from Utrecht University with a research MA in linguistics, where I was a Bright Minds Fellow. My research interests have spanned (so far) from multimodal LLMs to humor and comedy roasts, among others.</p>
-    <p class="bio" id="bio3"> Outside of my academic work, I take interest in creative multimedia, leadership, & alternative/slow tech projects or tech policies.</p>
+    <p class="bio" id="bio2">Graduated from University of Bucharest with a BA in literature and linguistics, and from Utrecht University with a research MA in linguistics, where I was a Bright Minds Fellow. My research interests have spanned (so far) from multimodal LLMs to humor and comedy roasts, among others.</p>
+    <p class="bio" id="bio3">Outside of my academic work, I take interest in creative multimedia, leadership, & alternative/slow tech projects or tech policies.</p>
     <div class="lang-toggle">
       <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
       <button id="btn-ro" onclick="setLang('ro')">RO</button>
@@ -256,6 +261,12 @@ const sections = [
     { titleKey: 'lead7-title', metaKey: 'lead7-meta', venue: 'Leaders Explore Programme', year: '2020', links: [['website','https://capacitateplus.wixsite.com/mysite']] },
     { titleKey: 'lead8-title', metaKey: 'lead8-meta', venue: 'Builders of the Future', year: '2019' },
   ]},
+  { id: 'help', header: 'sec-help', kind: 'text', items: [
+    { titleKey: 'help1' },
+    { titleKey: 'help2' },
+    { titleKey: 'help3' },
+    { titleKey: 'help4' },
+  ]},
 ];
 
 const i18n = {
@@ -265,6 +276,11 @@ const i18n = {
     'sec-research': 'Research jobs', 'sec-teaching': 'Teaching', 'sec-grants': 'Research grants*',
     'sec-awards': 'Awards & fellowships*', 'sec-scholarships': 'Scholarships', 'sec-summer': 'Summer schools',
     'sec-leadership': 'Leadership activities', 'in-print': 'In-print',
+    'sec-help': 'Most Wanted',
+    'help1': 'Looking for a collaborator-in-research on an idea at the intersection of language & AI?',
+    'help2': 'Building a leadership or educational project?',
+    'help3': "Applying to MA/PhD and want to see real cover letter examples?",
+    'help4': "I'm looking for you — reach out!",
     'pub-merge-title': 'MERGE: Minimal Expression-Replacement GEneralization Test for Natural Language Inference',
     'pub-hitorbe-title': 'Hit or Be Hit: Tests of (Pre) Compositional Abilities in Vision and Language Models',
     'pub-bilingual-title': 'Using a bilingual dual-path model for exploring syntactic mixing of simultaneous bilingual children',
@@ -296,7 +312,7 @@ const i18n = {
     'rj6-title': 'Research Contributor', 'rj6-meta': "Co-wrote 'A Romanian Corpus Annotated with Verbal Multiword Expressions'.",
     'teach1-title': 'Lecturer', 'teach1-meta': 'Taught a lecture on Regex in the Digital Tools and Methods course.',
     'teach2-title': 'Teaching Assistant', 'teach2-meta': 'Course on A.I. & psycholinguistics. Supervised 30 NLP research proposals.',
-    'teach3-title': 'Teaching Assistant', 'teach3-meta': 'NLP AI Msc Course. Held labs, graded programming assignments, held a lecture on NLI and & MERGE.'
+    'teach3-title': 'Teaching Assistant', 'teach3-meta': 'NLP AI Msc Course. Held labs, graded programming assignments, held a lecture on NLI and & MERGE.',
     'grant1-title': 'Short-Term Scientific Mission Research Grant',
     'award1-title': 'Humanities Conference Grant Award', 'award2-title': 'Bright Minds Fellowship*',
     'award3-title': 'Humanities Conference Grant Award', 'award4-title': 'Craving Science? Discover Conferences! Grant',
@@ -310,7 +326,7 @@ const i18n = {
     'ss6-title': '"Logic and Transdisciplinarity" Research School', 'ss6-meta': 'Graduate Level Programme',
     'ss7-title': 'Languages in Europe and their Diachronies School', 'ss8-title': 'Institute for World Literature',
     'ss8-meta': 'Graduate Level Programme',
-    'lead9-meta': 'Mentored young women wishing to pursue STEM careers'
+    'lead9-meta': 'Mentored young women wishing to pursue STEM careers',
     'lead1-meta': 'Co-organizer; linguistics conference.', 'lead2-title': 'Lingathon (funded by LOT)',
     'lead2-meta': 'Co-organizer; first national linguistics hackathon for RMA/PhD students.',
     'lead3-title': 'A cup of linguistics', 'lead3-meta': 'Co-organizer; seminar meetings for RMA/PhD student research talks.',
@@ -326,6 +342,11 @@ const i18n = {
     'sec-research': 'Posturi în cercetare', 'sec-teaching': 'Posturi didactice', 'sec-grants': 'Granturi de cercetare*',
     'sec-awards': 'Premii & burse*', 'sec-scholarships': 'Burse', 'sec-summer': 'Școli de vară',
     'sec-leadership': 'Activități de leadership', 'in-print': 'În tipar',
+    'sec-help': 'Most Wanted',
+    'help1': 'Ai o idee bună de cercetare la intersecția dintre lingivstică și AI?',
+    'help2': 'Ai un proiect de leadership sau educațional?',
+    'help3': 'Aplici la MA/Doctorat și vrei să vezi exemple de scrisori de intenție?',
+    'help4': 'Scrie-mi!',
     'pub-merge-title': 'MERGE: Test de Generalizare prin Înlocuire Minimală de Expresii pentru NLI',
     'pub-hitorbe-title': 'Lovește sau Fii Lovit: Teste ale Abilităților (Pre)Compoziționale în Modele Multimodale',
     'pub-bilingual-title': 'Utilizarea unui model dual bilingv pentru explorarea amestecului sintactic',
@@ -357,7 +378,7 @@ const i18n = {
     'rj6-title': 'Contributor Cercetător', 'rj6-meta': "Co-autoare a lucrării 'Un Treebank Românesc Adnotat cu Expresii Multiword Verbale'.",
     'teach1-title': 'Lector', 'teach1-meta': 'Curs despre Instrumente și Metode Digitale.',
     'teach2-title': 'Asistent', 'teach2-meta': 'Curs despre I.A. și psiholingvistică. Supervizare 30 propuneri de cercetare NLP.',
-    'teach3-title': 'Asistent', 'teach3-meta': 'Curs Msc NLP AI. Susținut și corectate proiecte pentru laboratoare, dar și un curs despre NLI și MERGE.'
+    'teach3-title': 'Asistent', 'teach3-meta': 'Curs Msc NLP AI. Susținut și corectate proiecte pentru laboratoare, dar și un curs despre NLI și MERGE.',
     'grant1-title': 'Grant de Cercetare pentru Misiune Științifică de Scurtă Durată',
     'award1-title': 'Grant pentru Conferințe în Științe Umaniste', 'award2-title': 'Bursă Bright Minds*',
     'award3-title': 'Grant pentru Conferințe în Științe Umaniste', 'award4-title': 'Grant „Craving Science? Discover Conferences!"',
@@ -371,8 +392,7 @@ const i18n = {
     'ss6-title': 'Școala „Logică și Transdisciplinaritate"', 'ss6-meta': 'Program de Nivel Doctoral',
     'ss7-title': 'Școala Limbilor Europene și Diacroniile Lor', 'ss8-title': 'Institutul de Literatură Mondială',
     'ss8-meta': 'Doctorat',
-
-    'lead9-meta': 'Mentor pentru tinere ce vor să urmeze o carieră în STEM', 
+    'lead9-meta': 'Mentor pentru tinere ce vor să urmeze o carieră în STEM',
     'lead1-meta': 'Co-organizatoare; conferință de lingvistică.', 'lead2-title': 'Lingathon (finanțat de LOT)',
     'lead2-meta': 'Co-organizatoare; primul hackathon național de lingvistică pentru RMA/doctoranzi.',
     'lead3-title': 'O ceașcă de lingvistică', 'lead3-meta': 'Co-organizatoare; întâlniri de seminar pentru RMA/doctoranzi.',
@@ -383,8 +403,6 @@ const i18n = {
     'lead8-title': 'Concursuri de design thinking', 'lead8-meta': 'Design pentru centru cultural pentru tineret; câștigat concurs pe mobilitate urbană.'
   }
 };
-
-function esc(s){ return s; }
 
 function renderRow(item, lang) {
   const t = i18n[lang];
@@ -403,13 +421,19 @@ function renderRow(item, lang) {
   return `<div class="row"><div class="left">${left}</div><div class="y">${year}</div></div>`;
 }
 
+function renderText(item, lang, isLast) {
+  const t = i18n[lang];
+  const text = item.titleKey ? (t[item.titleKey] || item.titleKey) : item.title;
+  return `<p class="textline${isLast ? ' reach' : ''}">${text}</p>`;
+}
+
 function render(lang) {
   const t = i18n[lang];
   const container = document.getElementById('sections');
   container.innerHTML = sections.map(sec => `
     <section id="${sec.id}">
       <h2>${t[sec.header]}</h2>
-      ${sec.items.map(it => renderRow(it, lang)).join('')}
+      ${sec.kind === 'text' ? sec.items.map((it,i) => renderText(it, lang, i === sec.items.length - 1)).join('') : sec.items.map(it => renderRow(it, lang)).join('')}
     </section>
   `).join('');
 
@@ -421,10 +445,10 @@ function render(lang) {
 function setLang(lang) {
   render(lang);
   document.getElementById('bio1').innerHTML = lang === 'ro'
-    ? '<strong>Doctorandă în anul doi </strong> în NLP la Universitatea din Utrecht. Focus: LLMs - generalizabilitate și explicabilitate, în special aspectul logic și metodele de evaluare. Coordonatori: Lasha Abzianidze, Tejaswini Deoskar și Yoad Winter.'
-    : '<strong>'Second-year PhD candidate</strong> in NLP at Utrecht University. Topics: generalizability and explainability in LLMs, with a focus on reasoning, benchmarks, and explanations. Supervisors: Lasha Abzianidze, Tejaswini Deoskar, and Yoad Winter.';
+    ? '<strong>Doctorandă în anul doi</strong> în NLP la Universitatea din Utrecht. Focus: LLMs - generalizabilitate și explicabilitate, în special aspectul logic și metodele de evaluare. Coordonatori: Lasha Abzianidze, Tejaswini Deoskar și Yoad Winter.'
+    : '<strong>Second-year PhD candidate</strong> in NLP at Utrecht University. Topics: generalizability and explainability in LLMs, with a focus on reasoning, benchmarks, and explanations. Supervisors: Lasha Abzianidze, Tejaswini Deoskar, and Yoad Winter.';
   document.getElementById('bio2').textContent = lang === 'ro'
-    ? 'Mi-am obținut licența în literatură și lingvistică la Universitatea din București și masterUL de cercetare în lingvistică la Universitatea Utrecht (bursieră Bright Minds). Interesele mele în cercetare au fost (până acum) de la modele multimodale, la umor și comedy roast-uri.'
+    ? 'Mi-am obținut licența în literatură și lingvistică la Universitatea din București și masterul de cercetare în lingvistică la Universitatea Utrecht (bursieră Bright Minds). Interesele mele în cercetare au fost (până acum) de la modele multimodale, la umor și comedy roast-uri.'
     : 'Graduated from University of Bucharest with a BA in literature and linguistics, and from Utrecht University with a research MA in linguistics, where I was a Bright Minds Fellow. My research interests have spanned (so far) from multimodal LLMs to humor and comedy roasts, among others.';
   document.getElementById('bio3').textContent = lang === 'ro'
     ? 'În afara activității mele academice, sunt interesată de proiecte creative multimedia, de leadership, ce presupun alternative/slow tech sau politici de tech.'
@@ -441,3 +465,4 @@ setLang(saved);
 
 </body>
 </html>
+
